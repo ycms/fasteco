@@ -12,7 +12,7 @@ return array(
     'YC\\Main\\' => array($vendorDir . '/ycms/module-main'),
     'YC\\' => array($baseDir . '/app'),
     'YCMS\\Modules\\' => array($vendorDir . '/ycms/modules'),
-    'YCMS\\' => array($baseDir . '/source/app', $vendorDir . '/ycms/helpers'),
+    'YCMS\\' => array($baseDir . '/source/app'),
     'XdgBaseDir\\' => array($vendorDir . '/dnoegel/php-xdg-base-dir/src'),
     'Vinkla\\Hashids\\' => array($vendorDir . '/vinkla/hashids/src'),
     'Symfony\\Component\\Yaml\\' => array($vendorDir . '/symfony/yaml'),
