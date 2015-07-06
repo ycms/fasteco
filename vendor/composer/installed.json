@@ -4743,59 +4743,6 @@
         ]
     },
     {
-        "name": "ycms/modules",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/ycms/modules.git",
-            "reference": "e60bb180b3b03c3a5e4323ac66dc6c32621c4755"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/ycms/modules/zipball/e60bb180b3b03c3a5e4323ac66dc6c32621c4755",
-            "reference": "e60bb180b3b03c3a5e4323ac66dc6c32621c4755",
-            "shasum": ""
-        },
-        "require": {
-            "laravel/framework": "5.1.*",
-            "laravelcollective/html": "~5.0",
-            "php": ">=5.4.0",
-            "pingpong/generators": "2.1.*",
-            "pingpong/support": "2.1.*"
-        },
-        "require-dev": {
-            "mockery/mockery": "~0.9",
-            "phpunit/phpunit": "~4"
-        },
-        "time": "2015-07-06 01:14:34",
-        "type": "library",
-        "installation-source": "source",
-        "autoload": {
-            "psr-4": {
-                "Pingpong\\Modules\\": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Pingpong Labs",
-                "email": "pingpong.labs@gmail.com"
-            }
-        ],
-        "description": "Laravel Modules",
-        "keywords": [
-            "hmvc",
-            "laravel",
-            "module",
-            "modules",
-            "pingpong"
-        ]
-    },
-    {
         "name": "ycms/krumo",
         "version": "v0.5.0",
         "version_normalized": "0.5.0.0",
@@ -4879,6 +4826,90 @@
                 "name": "YCMS Labs",
                 "email": "ycms.net@gmail.com"
             }
+        ]
+    },
+    {
+        "name": "ycms/module-main",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ycms/module-main.git",
+            "reference": "900f0cb5d11e027fd693cc3f1c30f0e734e99a7b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ycms/module-main/zipball/900f0cb5d11e027fd693cc3f1c30f0e734e99a7b",
+            "reference": "900f0cb5d11e027fd693cc3f1c30f0e734e99a7b",
+            "shasum": ""
+        },
+        "time": "2015-07-06 03:50:27",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "App\\Main\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "authors": [
+            {
+                "name": "YCMS Labs",
+                "email": "ycms.net@gmail.com"
+            }
+        ]
+    },
+    {
+        "name": "ycms/modules",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ycms/modules.git",
+            "reference": "c52707eb1d597e28750d11fc76f8fc1f60205f90"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ycms/modules/zipball/c52707eb1d597e28750d11fc76f8fc1f60205f90",
+            "reference": "c52707eb1d597e28750d11fc76f8fc1f60205f90",
+            "shasum": ""
+        },
+        "require": {
+            "laravel/framework": "5.1.*",
+            "laravelcollective/html": "~5.0",
+            "php": ">=5.4.0",
+            "pingpong/generators": "2.1.*",
+            "pingpong/support": "2.1.*"
+        },
+        "require-dev": {
+            "mockery/mockery": "~0.9",
+            "phpunit/phpunit": "~4"
+        },
+        "time": "2015-07-06 03:42:40",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "YCMS\\Modules\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "YCMS Labs",
+                "email": "pingpong.labs@gmail.com"
+            }
+        ],
+        "description": "Laravel Modules",
+        "keywords": [
+            "hmvc",
+            "laravel",
+            "module",
+            "modules",
+            "pingpong"
         ]
     }
 ]

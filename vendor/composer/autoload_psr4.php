@@ -9,6 +9,7 @@ return array(
     'Zizaco\\Entrust\\' => array($vendorDir . '/zizaco/entrust/src/Entrust'),
     'Zhuzhichao\\IpLocationZh\\' => array($vendorDir . '/zhuzhichao/ip-location-zh/src'),
     'YC\\' => array($baseDir . '/app'),
+    'YCMS\\Modules\\' => array($vendorDir . '/ycms/modules'),
     'YCMS\\' => array($baseDir . '/source/app'),
     'XdgBaseDir\\' => array($vendorDir . '/dnoegel/php-xdg-base-dir/src'),
     'Vinkla\\Hashids\\' => array($vendorDir . '/vinkla/hashids/src'),
@@ -29,7 +30,6 @@ return array(
     'SuperClosure\\' => array($vendorDir . '/jeremeamia/SuperClosure/src'),
     'Stringy\\' => array($vendorDir . '/danielstjules/stringy/src'),
     'Pingpong\\Support\\' => array($vendorDir . '/pingpong/support'),
-    'Pingpong\\Modules\\' => array($vendorDir . '/ycms/modules'),
     'Pingpong\\Generators\\' => array($vendorDir . '/pingpong/generators'),
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
     'Lord\\Laroute\\' => array($vendorDir . '/lord/laroute/src'),
@@ -46,5 +46,6 @@ return array(
     'Barryvdh\\LaravelIdeHelper\\' => array($vendorDir . '/barryvdh/laravel-ide-helper/src'),
     'Barryvdh\\Debugbar\\' => array($vendorDir . '/barryvdh/laravel-debugbar/src'),
     'App\\Tpl\\' => array($vendorDir . '/ycms/tpl'),
+    'App\\Main\\' => array($vendorDir . '/ycms/module-main'),
     'App\\' => array($baseDir . '/source/modules'),
 );
