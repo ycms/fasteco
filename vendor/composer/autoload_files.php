@@ -20,4 +20,5 @@ return array(
     $vendorDir . '/zhuzhichao/ip-location-zh/src/IpLocationZh.php',
     $vendorDir . '/illuminate/html/helpers.php',
     $vendorDir . '/ycms/krumo/class.krumo.php',
+    $vendorDir . '/ycms/helpers/helpers.php',
 );
