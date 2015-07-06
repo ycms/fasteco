@@ -161,6 +161,7 @@ return [
 
         YCMS\Modules\ModulesServiceProvider::class,
         YCMS\Providers\YCMSServiceProvider::class,
+
     ],
 
     /*
@@ -223,6 +224,8 @@ return [
          * Append
          */
         'Module'    => YCMS\Modules\Facades\Module::class,
+
+        "YCMS"      => YCMS\Facades\YCMS::class,
 
     ],
 

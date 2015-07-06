@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.1.6 (LTS) on 2015-07-05.
+ * Generated for Laravel 5.1.6 (LTS) on 2015-07-06.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -1260,7 +1260,7 @@ namespace {
         /**
          * Get the currently authenticated user.
          *
-         * @return \Douyasi\Models\User|null 
+         * @return \YCMS\Models\User|null 
          * @static 
          */
         public static function user(){
@@ -1362,7 +1362,7 @@ namespace {
          *
          * @param mixed $id
          * @param bool $remember
-         * @return \Douyasi\Models\User 
+         * @return \YCMS\Models\User 
          * @static 
          */
         public static function loginUsingId($id, $remember = false){
@@ -1467,7 +1467,7 @@ namespace {
         /**
          * Return the currently cached user.
          *
-         * @return \Douyasi\Models\User|null 
+         * @return \YCMS\Models\User|null 
          * @static 
          */
         public static function getUser(){
@@ -1509,7 +1509,7 @@ namespace {
         /**
          * Get the last user we attempted to authenticate.
          *
-         * @return \Douyasi\Models\User 
+         * @return \YCMS\Models\User 
          * @static 
          */
         public static function getLastAttempted(){
@@ -11951,7 +11951,7 @@ namespace {
     }
 
 
-    class Module extends \Pingpong\Modules\Facades\Module{
+    class Module extends \YCMS\Modules\Facades\Module{
         
         /**
          * Add other module location.
@@ -11961,7 +11961,7 @@ namespace {
          * @static 
          */
         public static function addLocation($path){
-            return \Pingpong\Modules\Repository::addLocation($path);
+            return \YCMS\Modules\Repository::addLocation($path);
         }
         
         /**
@@ -11972,7 +11972,7 @@ namespace {
          * @static 
          */
         public static function addPath($path){
-            return \Pingpong\Modules\Repository::addPath($path);
+            return \YCMS\Modules\Repository::addPath($path);
         }
         
         /**
@@ -11982,7 +11982,7 @@ namespace {
          * @static 
          */
         public static function getPaths(){
-            return \Pingpong\Modules\Repository::getPaths();
+            return \YCMS\Modules\Repository::getPaths();
         }
         
         /**
@@ -11992,7 +11992,7 @@ namespace {
          * @static 
          */
         public static function getScanPaths(){
-            return \Pingpong\Modules\Repository::getScanPaths();
+            return \YCMS\Modules\Repository::getScanPaths();
         }
         
         /**
@@ -12002,7 +12002,7 @@ namespace {
          * @static 
          */
         public static function scan(){
-            return \Pingpong\Modules\Repository::scan();
+            return \YCMS\Modules\Repository::scan();
         }
         
         /**
@@ -12012,7 +12012,7 @@ namespace {
          * @static 
          */
         public static function all(){
-            return \Pingpong\Modules\Repository::all();
+            return \YCMS\Modules\Repository::all();
         }
         
         /**
@@ -12022,17 +12022,17 @@ namespace {
          * @static 
          */
         public static function getCached(){
-            return \Pingpong\Modules\Repository::getCached();
+            return \YCMS\Modules\Repository::getCached();
         }
         
         /**
          * Get all modules as collection instance.
          *
-         * @return \Pingpong\Modules\Collection 
+         * @return \YCMS\Modules\Collection 
          * @static 
          */
         public static function toCollection(){
-            return \Pingpong\Modules\Repository::toCollection();
+            return \YCMS\Modules\Repository::toCollection();
         }
         
         /**
@@ -12043,7 +12043,7 @@ namespace {
          * @static 
          */
         public static function getByStatus($status){
-            return \Pingpong\Modules\Repository::getByStatus($status);
+            return \YCMS\Modules\Repository::getByStatus($status);
         }
         
         /**
@@ -12054,7 +12054,7 @@ namespace {
          * @static 
          */
         public static function has($name){
-            return \Pingpong\Modules\Repository::has($name);
+            return \YCMS\Modules\Repository::has($name);
         }
         
         /**
@@ -12064,7 +12064,7 @@ namespace {
          * @static 
          */
         public static function enabled(){
-            return \Pingpong\Modules\Repository::enabled();
+            return \YCMS\Modules\Repository::enabled();
         }
         
         /**
@@ -12074,7 +12074,7 @@ namespace {
          * @static 
          */
         public static function disabled(){
-            return \Pingpong\Modules\Repository::disabled();
+            return \YCMS\Modules\Repository::disabled();
         }
         
         /**
@@ -12084,7 +12084,7 @@ namespace {
          * @static 
          */
         public static function count(){
-            return \Pingpong\Modules\Repository::count();
+            return \YCMS\Modules\Repository::count();
         }
         
         /**
@@ -12095,7 +12095,7 @@ namespace {
          * @static 
          */
         public static function getOrdered($direction = 'asc'){
-            return \Pingpong\Modules\Repository::getOrdered($direction);
+            return \YCMS\Modules\Repository::getOrdered($direction);
         }
         
         /**
@@ -12105,7 +12105,7 @@ namespace {
          * @static 
          */
         public static function getPath(){
-            return \Pingpong\Modules\Repository::getPath();
+            return \YCMS\Modules\Repository::getPath();
         }
         
         /**
@@ -12114,7 +12114,7 @@ namespace {
          * @static 
          */
         public static function register(){
-            return \Pingpong\Modules\Repository::register();
+            return \YCMS\Modules\Repository::register();
         }
         
         /**
@@ -12123,7 +12123,7 @@ namespace {
          * @static 
          */
         public static function boot(){
-            return \Pingpong\Modules\Repository::boot();
+            return \YCMS\Modules\Repository::boot();
         }
         
         /**
@@ -12133,7 +12133,7 @@ namespace {
          * @static 
          */
         public static function find($name){
-            return \Pingpong\Modules\Repository::find($name);
+            return \YCMS\Modules\Repository::find($name);
         }
         
         /**
@@ -12143,29 +12143,29 @@ namespace {
          * @static 
          */
         public static function get($name){
-            return \Pingpong\Modules\Repository::get($name);
+            return \YCMS\Modules\Repository::get($name);
         }
         
         /**
          * Find a specific module, if there return that, otherwise throw exception.
          *
          * @param $name
-         * @return \Pingpong\Modules\Module 
+         * @return \YCMS\Modules\Module 
          * @throws ModuleNotFoundException
          * @static 
          */
         public static function findOrFail($name){
-            return \Pingpong\Modules\Repository::findOrFail($name);
+            return \YCMS\Modules\Repository::findOrFail($name);
         }
         
         /**
          * Get all modules as laravel collection instance.
          *
-         * @return \Pingpong\Modules\Collection 
+         * @return \YCMS\Modules\Collection 
          * @static 
          */
         public static function collections(){
-            return \Pingpong\Modules\Repository::collections();
+            return \YCMS\Modules\Repository::collections();
         }
         
         /**
@@ -12176,7 +12176,7 @@ namespace {
          * @static 
          */
         public static function getModulePath($module){
-            return \Pingpong\Modules\Repository::getModulePath($module);
+            return \YCMS\Modules\Repository::getModulePath($module);
         }
         
         /**
@@ -12187,7 +12187,7 @@ namespace {
          * @static 
          */
         public static function assetPath($module){
-            return \Pingpong\Modules\Repository::assetPath($module);
+            return \YCMS\Modules\Repository::assetPath($module);
         }
         
         /**
@@ -12198,7 +12198,7 @@ namespace {
          * @static 
          */
         public static function config($key){
-            return \Pingpong\Modules\Repository::config($key);
+            return \YCMS\Modules\Repository::config($key);
         }
         
         /**
@@ -12208,7 +12208,7 @@ namespace {
          * @static 
          */
         public static function getUsedStoragePath(){
-            return \Pingpong\Modules\Repository::getUsedStoragePath();
+            return \YCMS\Modules\Repository::getUsedStoragePath();
         }
         
         /**
@@ -12219,7 +12219,7 @@ namespace {
          * @static 
          */
         public static function setUsed($name){
-            return \Pingpong\Modules\Repository::setUsed($name);
+            return \YCMS\Modules\Repository::setUsed($name);
         }
         
         /**
@@ -12229,7 +12229,7 @@ namespace {
          * @static 
          */
         public static function getUsedNow(){
-            return \Pingpong\Modules\Repository::getUsedNow();
+            return \YCMS\Modules\Repository::getUsedNow();
         }
         
         /**
@@ -12239,7 +12239,7 @@ namespace {
          * @static 
          */
         public static function getUsed(){
-            return \Pingpong\Modules\Repository::getUsed();
+            return \YCMS\Modules\Repository::getUsed();
         }
         
         /**
@@ -12249,7 +12249,7 @@ namespace {
          * @static 
          */
         public static function getFiles(){
-            return \Pingpong\Modules\Repository::getFiles();
+            return \YCMS\Modules\Repository::getFiles();
         }
         
         /**
@@ -12259,7 +12259,7 @@ namespace {
          * @static 
          */
         public static function getAssetsPath(){
-            return \Pingpong\Modules\Repository::getAssetsPath();
+            return \YCMS\Modules\Repository::getAssetsPath();
         }
         
         /**
@@ -12271,7 +12271,7 @@ namespace {
          * @static 
          */
         public static function asset($asset){
-            return \Pingpong\Modules\Repository::asset($asset);
+            return \YCMS\Modules\Repository::asset($asset);
         }
         
         /**
@@ -12282,7 +12282,7 @@ namespace {
          * @static 
          */
         public static function active($name){
-            return \Pingpong\Modules\Repository::active($name);
+            return \YCMS\Modules\Repository::active($name);
         }
         
         /**
@@ -12293,7 +12293,7 @@ namespace {
          * @static 
          */
         public static function notActive($name){
-            return \Pingpong\Modules\Repository::notActive($name);
+            return \YCMS\Modules\Repository::notActive($name);
         }
         
         /**
@@ -12304,7 +12304,7 @@ namespace {
          * @static 
          */
         public static function enable($name){
-            return \Pingpong\Modules\Repository::enable($name);
+            return \YCMS\Modules\Repository::enable($name);
         }
         
         /**
@@ -12315,7 +12315,7 @@ namespace {
          * @static 
          */
         public static function disable($name){
-            return \Pingpong\Modules\Repository::disable($name);
+            return \YCMS\Modules\Repository::disable($name);
         }
         
         /**
@@ -12326,7 +12326,7 @@ namespace {
          * @static 
          */
         public static function delete($name){
-            return \Pingpong\Modules\Repository::delete($name);
+            return \YCMS\Modules\Repository::delete($name);
         }
         
         /**
@@ -12336,7 +12336,7 @@ namespace {
          * @static 
          */
         public static function update($module){
-            return \Pingpong\Modules\Repository::update($module);
+            return \YCMS\Modules\Repository::update($module);
         }
         
         /**
@@ -12350,7 +12350,7 @@ namespace {
          * @static 
          */
         public static function install($name, $version = 'dev-master', $type = 'composer', $subtree = false){
-            return \Pingpong\Modules\Repository::install($name, $version, $type, $subtree);
+            return \YCMS\Modules\Repository::install($name, $version, $type, $subtree);
         }
         
         /**
@@ -12360,7 +12360,7 @@ namespace {
          * @static 
          */
         public static function getStubPath(){
-            return \Pingpong\Modules\Repository::getStubPath();
+            return \YCMS\Modules\Repository::getStubPath();
         }
         
         /**
@@ -12371,7 +12371,1974 @@ namespace {
          * @static 
          */
         public static function setStubPath($stubPath){
-            return \Pingpong\Modules\Repository::setStubPath($stubPath);
+            return \YCMS\Modules\Repository::setStubPath($stubPath);
+        }
+        
+    }
+
+
+    class YCMS extends \YCMS\Facades\YCMS{
+        
+        /**
+         * 格式化表单校验消息
+         *
+         * @param array $messages 未格式化之前数组
+         * @return string 格式化之后字符串
+         * @static 
+         */
+        public static function format_message($messages){
+            return \YCMS\Models\YCMS::format_message($messages);
+        }
+        
+        /**
+         * 格式化表单校验消息，并进行json数组化预处理
+         *
+         * @param array $messages 未格式化之前数组
+         * @param array $json 原始json数组数据
+         * @return array 
+         * @static 
+         */
+        public static function format_json_message($messages, $json){
+            return \YCMS\Models\YCMS::format_json_message($messages, $json);
+        }
+        
+        /**
+         * 静态文件cdn部署
+         * 如果设置过app.cdn_url参数，则启用它作为静态资源根目录，否则使用默认的app.url作为静态资源根目录
+         * 如果cdn_url = 'http://ystatic.cn'
+         * 则 cdn('assets/css/style.css', 'v=1.0') 实际表示的路径为 http://ystatic.cn/assets/css/style.css?v=1.0
+         *
+         * @param string $filepath 静态资源相对路径
+         * @param string $q 尾缀符，如 assets/css/style.css?v=1.4.3
+         * @return string 
+         * @static 
+         */
+        public static function cdn($filepath, $q = ''){
+            return \YCMS\Models\YCMS::cdn($filepath, $q);
+        }
+        
+        /**
+         * 使用Minify(https://github.com/mrclay/minify)来压缩与拼合静态文件
+         * 实现优化部署
+         * 示例：
+         * minify(array('css/yas_style.css','lib/font-awesome/css/font-awesome.min.css'))
+         * http://cmf.yas.so/min/b=assets&f=css/yas_style.css,lib/font-awesome/css/font-awesome.min.css
+         *
+         * @param array $data 静态资源数组
+         * @param string $base 相对基路径
+         * @return string 
+         * @static 
+         */
+        public static function minify($data, $base = 'assets'){
+            return \YCMS\Models\YCMS::minify($data, $base);
+        }
+        
+        /**
+         * 文章推荐位 flag html标签化
+         *
+         * @param string $flag_str
+         * @param array $flags
+         * @return string 
+         * @static 
+         */
+        public static function flag_tag($flag_str, $flags){
+            return \YCMS\Models\YCMS::flag_tag($flag_str, $flags);
+        }
+        
+        /**
+         * 中文摘要算法
+         *
+         * @param string $content 正文
+         * @return string 
+         * @static 
+         */
+        public static function chinese_excerpt($content){
+            return \YCMS\Models\YCMS::chinese_excerpt($content);
+        }
+        
+        /**
+         * 芽丝CMF后台分页helper
+         *
+         * @param \Illuminate\Support\Collection $model
+         * @param array $data 追加的参数数组
+         * @return string 返回分页
+         * @static 
+         */
+        public static function page_links($model, $data = array()){
+            return \YCMS\Models\YCMS::page_links($model, $data);
+        }
+        
+        /**
+         * 检查 特定数组 特定键名的键值 是否与待比较的值一致
+         * 此helper主要用于角色权限特征判断
+         *
+         * @param array $array 传入的数组
+         * @param string $key 待比较的数组键名
+         * @param string $value 待比较的值
+         * @return boolean 一致则返回true，否则返回false
+         * @static 
+         */
+        public static function check_array($array, $key, $value){
+            return \YCMS\Models\YCMS::check_array($array, $key, $value);
+        }
+        
+        /**
+         * 检查 特殊字符串（如逗号分隔值字符串） 是否与待比较的值一致
+         * 此helper主要用于文章推荐位特征判断
+         *
+         * @param string $string 逗号分隔值字符串
+         * @param string $value 待比较的值
+         * @return boolean 一致则返回true，否则返回false
+         * @static 
+         */
+        public static function check_string($string, $value){
+            return \YCMS\Models\YCMS::check_string($string, $value);
+        }
+        
+        /**
+         * 获取登录用户信息，用于登录之后页面显示或验证
+         *
+         * @param string $ret 限定返回的字段
+         * @return string|object 返回登录用户相关字段信息或其ORM对象
+         * @static 
+         */
+        public static function user($ret = 'nickname'){
+            return \YCMS\Models\YCMS::user($ret);
+        }
+        
+        /**
+         * 根据路由$route处理当前导航URL，用于匹配导航高亮
+         * $route当前必须满足 三段以上点分 诸如 route('admin.article.index')
+         *
+         * @param string $route 点分式路由别名
+         * @return string 返回经过处理之后路径
+         * @static 
+         */
+        public static function cur_nav($route = ''){
+            return \YCMS\Models\YCMS::cur_nav($route);
+        }
+        
+        /**
+         * 根据碎片slug获取碎片模型内容
+         * 如果$slug真实存在，则默认返回该碎片内容,
+         * 否则返回空HTML注释字符串'<!--不存在该碎片-->'
+         *
+         * @param string $slug 碎片slug（URL SEO化别名）
+         * @param string $ret 限定返回的字段
+         * @return string 返回碎片相关字段信息
+         * @static 
+         */
+        public static function fragment($slug, $ret = ''){
+            return \YCMS\Models\YCMS::fragment($slug, $ret);
+        }
+        
+        /**
+         * Register a new global scope on the model.
+         *
+         * @param \Illuminate\Database\Eloquent\ScopeInterface $scope
+         * @return void 
+         * @static 
+         */
+        public static function addGlobalScope($scope){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            \YCMS\Models\YCMS::addGlobalScope($scope);
+        }
+        
+        /**
+         * Determine if a model has a global scope.
+         *
+         * @param \Illuminate\Database\Eloquent\ScopeInterface $scope
+         * @return bool 
+         * @static 
+         */
+        public static function hasGlobalScope($scope){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::hasGlobalScope($scope);
+        }
+        
+        /**
+         * Get a global scope registered with the model.
+         *
+         * @param \Illuminate\Database\Eloquent\ScopeInterface $scope
+         * @return \Illuminate\Database\Eloquent\ScopeInterface|null 
+         * @static 
+         */
+        public static function getGlobalScope($scope){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::getGlobalScope($scope);
+        }
+        
+        /**
+         * Get the global scopes for this class instance.
+         *
+         * @return \Illuminate\Database\Eloquent\ScopeInterface[] 
+         * @static 
+         */
+        public static function getGlobalScopes(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::getGlobalScopes();
+        }
+        
+        /**
+         * Register an observer with the Model.
+         *
+         * @param object|string $class
+         * @param int $priority
+         * @return void 
+         * @static 
+         */
+        public static function observe($class, $priority = 0){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            \YCMS\Models\YCMS::observe($class, $priority);
+        }
+        
+        /**
+         * Fill the model with an array of attributes.
+         *
+         * @param array $attributes
+         * @return $this 
+         * @throws \Illuminate\Database\Eloquent\MassAssignmentException
+         * @static 
+         */
+        public static function fill($attributes){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::fill($attributes);
+        }
+        
+        /**
+         * Fill the model with an array of attributes. Force mass assignment.
+         *
+         * @param array $attributes
+         * @return $this 
+         * @static 
+         */
+        public static function forceFill($attributes){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::forceFill($attributes);
+        }
+        
+        /**
+         * Create a new instance of the given model.
+         *
+         * @param array $attributes
+         * @param bool $exists
+         * @return static 
+         * @static 
+         */
+        public static function newInstance($attributes = array(), $exists = false){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::newInstance($attributes, $exists);
+        }
+        
+        /**
+         * Create a new model instance that is existing.
+         *
+         * @param array $attributes
+         * @param string|null $connection
+         * @return static 
+         * @static 
+         */
+        public static function newFromBuilder($attributes = array(), $connection = null){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::newFromBuilder($attributes, $connection);
+        }
+        
+        /**
+         * Create a collection of models from plain arrays.
+         *
+         * @param array $items
+         * @param string|null $connection
+         * @return \Illuminate\Database\Eloquent\Collection 
+         * @static 
+         */
+        public static function hydrate($items, $connection = null){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::hydrate($items, $connection);
+        }
+        
+        /**
+         * Create a collection of models from a raw query.
+         *
+         * @param string $query
+         * @param array $bindings
+         * @param string|null $connection
+         * @return \Illuminate\Database\Eloquent\Collection 
+         * @static 
+         */
+        public static function hydrateRaw($query, $bindings = array(), $connection = null){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::hydrateRaw($query, $bindings, $connection);
+        }
+        
+        /**
+         * Save a new model and return the instance.
+         *
+         * @param array $attributes
+         * @return static 
+         * @static 
+         */
+        public static function create($attributes = array()){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::create($attributes);
+        }
+        
+        /**
+         * Save a new model and return the instance. Allow mass-assignment.
+         *
+         * @param array $attributes
+         * @return static 
+         * @static 
+         */
+        public static function forceCreate($attributes){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::forceCreate($attributes);
+        }
+        
+        /**
+         * Get the first record matching the attributes or create it.
+         *
+         * @param array $attributes
+         * @return static 
+         * @static 
+         */
+        public static function firstOrCreate($attributes){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::firstOrCreate($attributes);
+        }
+        
+        /**
+         * Get the first record matching the attributes or instantiate it.
+         *
+         * @param array $attributes
+         * @return static 
+         * @static 
+         */
+        public static function firstOrNew($attributes){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::firstOrNew($attributes);
+        }
+        
+        /**
+         * Create or update a record matching the attributes, and fill it with values.
+         *
+         * @param array $attributes
+         * @param array $values
+         * @return static 
+         * @static 
+         */
+        public static function updateOrCreate($attributes, $values = array()){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::updateOrCreate($attributes, $values);
+        }
+        
+        /**
+         * Begin querying the model.
+         *
+         * @return \Illuminate\Database\Eloquent\Builder 
+         * @static 
+         */
+        public static function query(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::query();
+        }
+        
+        /**
+         * Begin querying the model on a given connection.
+         *
+         * @param string|null $connection
+         * @return \Illuminate\Database\Eloquent\Builder 
+         * @static 
+         */
+        public static function on($connection = null){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::on($connection);
+        }
+        
+        /**
+         * Begin querying the model on the write connection.
+         *
+         * @return \Illuminate\Database\Query\Builder 
+         * @static 
+         */
+        public static function onWriteConnection(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::onWriteConnection();
+        }
+        
+        /**
+         * Get all of the models from the database.
+         *
+         * @param array $columns
+         * @return \Illuminate\Database\Eloquent\Collection|static[] 
+         * @static 
+         */
+        public static function all($columns = array()){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::all($columns);
+        }
+        
+        /**
+         * Find a model by its primary key or return new static.
+         *
+         * @param mixed $id
+         * @param array $columns
+         * @return \Illuminate\Support\Collection|static 
+         * @static 
+         */
+        public static function findOrNew($id, $columns = array()){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::findOrNew($id, $columns);
+        }
+        
+        /**
+         * Reload a fresh model instance from the database.
+         *
+         * @param array $with
+         * @return $this 
+         * @static 
+         */
+        public static function fresh($with = array()){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::fresh($with);
+        }
+        
+        /**
+         * Eager load relations on the model.
+         *
+         * @param array|string $relations
+         * @return $this 
+         * @static 
+         */
+        public static function load($relations){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::load($relations);
+        }
+        
+        /**
+         * Being querying a model with eager loading.
+         *
+         * @param array|string $relations
+         * @return \Illuminate\Database\Eloquent\Builder|static 
+         * @static 
+         */
+        public static function with($relations){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::with($relations);
+        }
+        
+        /**
+         * Define a one-to-one relationship.
+         *
+         * @param string $related
+         * @param string $foreignKey
+         * @param string $localKey
+         * @return \Illuminate\Database\Eloquent\Relations\HasOne 
+         * @static 
+         */
+        public static function hasOne($related, $foreignKey = null, $localKey = null){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::hasOne($related, $foreignKey, $localKey);
+        }
+        
+        /**
+         * Define a polymorphic one-to-one relationship.
+         *
+         * @param string $related
+         * @param string $name
+         * @param string $type
+         * @param string $id
+         * @param string $localKey
+         * @return \Illuminate\Database\Eloquent\Relations\MorphOne 
+         * @static 
+         */
+        public static function morphOne($related, $name, $type = null, $id = null, $localKey = null){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::morphOne($related, $name, $type, $id, $localKey);
+        }
+        
+        /**
+         * Define an inverse one-to-one or many relationship.
+         *
+         * @param string $related
+         * @param string $foreignKey
+         * @param string $otherKey
+         * @param string $relation
+         * @return \Illuminate\Database\Eloquent\Relations\BelongsTo 
+         * @static 
+         */
+        public static function belongsTo($related, $foreignKey = null, $otherKey = null, $relation = null){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::belongsTo($related, $foreignKey, $otherKey, $relation);
+        }
+        
+        /**
+         * Define a polymorphic, inverse one-to-one or many relationship.
+         *
+         * @param string $name
+         * @param string $type
+         * @param string $id
+         * @return \Illuminate\Database\Eloquent\Relations\MorphTo 
+         * @static 
+         */
+        public static function morphTo($name = null, $type = null, $id = null){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::morphTo($name, $type, $id);
+        }
+        
+        /**
+         * Define a one-to-many relationship.
+         *
+         * @param string $related
+         * @param string $foreignKey
+         * @param string $localKey
+         * @return \Illuminate\Database\Eloquent\Relations\HasMany 
+         * @static 
+         */
+        public static function hasMany($related, $foreignKey = null, $localKey = null){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::hasMany($related, $foreignKey, $localKey);
+        }
+        
+        /**
+         * Define a has-many-through relationship.
+         *
+         * @param string $related
+         * @param string $through
+         * @param string|null $firstKey
+         * @param string|null $secondKey
+         * @return \Illuminate\Database\Eloquent\Relations\HasManyThrough 
+         * @static 
+         */
+        public static function hasManyThrough($related, $through, $firstKey = null, $secondKey = null, $localKey = null){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::hasManyThrough($related, $through, $firstKey, $secondKey, $localKey);
+        }
+        
+        /**
+         * Define a polymorphic one-to-many relationship.
+         *
+         * @param string $related
+         * @param string $name
+         * @param string $type
+         * @param string $id
+         * @param string $localKey
+         * @return \Illuminate\Database\Eloquent\Relations\MorphMany 
+         * @static 
+         */
+        public static function morphMany($related, $name, $type = null, $id = null, $localKey = null){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::morphMany($related, $name, $type, $id, $localKey);
+        }
+        
+        /**
+         * Define a many-to-many relationship.
+         *
+         * @param string $related
+         * @param string $table
+         * @param string $foreignKey
+         * @param string $otherKey
+         * @param string $relation
+         * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany 
+         * @static 
+         */
+        public static function belongsToMany($related, $table = null, $foreignKey = null, $otherKey = null, $relation = null){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::belongsToMany($related, $table, $foreignKey, $otherKey, $relation);
+        }
+        
+        /**
+         * Define a polymorphic many-to-many relationship.
+         *
+         * @param string $related
+         * @param string $name
+         * @param string $table
+         * @param string $foreignKey
+         * @param string $otherKey
+         * @param bool $inverse
+         * @return \Illuminate\Database\Eloquent\Relations\MorphToMany 
+         * @static 
+         */
+        public static function morphToMany($related, $name, $table = null, $foreignKey = null, $otherKey = null, $inverse = false){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::morphToMany($related, $name, $table, $foreignKey, $otherKey, $inverse);
+        }
+        
+        /**
+         * Define a polymorphic, inverse many-to-many relationship.
+         *
+         * @param string $related
+         * @param string $name
+         * @param string $table
+         * @param string $foreignKey
+         * @param string $otherKey
+         * @return \Illuminate\Database\Eloquent\Relations\MorphToMany 
+         * @static 
+         */
+        public static function morphedByMany($related, $name, $table = null, $foreignKey = null, $otherKey = null){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::morphedByMany($related, $name, $table, $foreignKey, $otherKey);
+        }
+        
+        /**
+         * Get the joining table name for a many-to-many relation.
+         *
+         * @param string $related
+         * @return string 
+         * @static 
+         */
+        public static function joiningTable($related){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::joiningTable($related);
+        }
+        
+        /**
+         * Destroy the models for the given IDs.
+         *
+         * @param array|int $ids
+         * @return int 
+         * @static 
+         */
+        public static function destroy($ids){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::destroy($ids);
+        }
+        
+        /**
+         * Delete the model from the database.
+         *
+         * @return bool|null 
+         * @throws \Exception
+         * @static 
+         */
+        public static function delete(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::delete();
+        }
+        
+        /**
+         * Force a hard delete on a soft deleted model.
+         * 
+         * This method protects developers from running forceDelete when trait is missing.
+         *
+         * @return void 
+         * @static 
+         */
+        public static function forceDelete(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            \YCMS\Models\YCMS::forceDelete();
+        }
+        
+        /**
+         * Register a saving model event with the dispatcher.
+         *
+         * @param \Closure|string $callback
+         * @param int $priority
+         * @return void 
+         * @static 
+         */
+        public static function saving($callback, $priority = 0){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            \YCMS\Models\YCMS::saving($callback, $priority);
+        }
+        
+        /**
+         * Register a saved model event with the dispatcher.
+         *
+         * @param \Closure|string $callback
+         * @param int $priority
+         * @return void 
+         * @static 
+         */
+        public static function saved($callback, $priority = 0){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            \YCMS\Models\YCMS::saved($callback, $priority);
+        }
+        
+        /**
+         * Register an updating model event with the dispatcher.
+         *
+         * @param \Closure|string $callback
+         * @param int $priority
+         * @return void 
+         * @static 
+         */
+        public static function updating($callback, $priority = 0){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            \YCMS\Models\YCMS::updating($callback, $priority);
+        }
+        
+        /**
+         * Register an updated model event with the dispatcher.
+         *
+         * @param \Closure|string $callback
+         * @param int $priority
+         * @return void 
+         * @static 
+         */
+        public static function updated($callback, $priority = 0){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            \YCMS\Models\YCMS::updated($callback, $priority);
+        }
+        
+        /**
+         * Register a creating model event with the dispatcher.
+         *
+         * @param \Closure|string $callback
+         * @param int $priority
+         * @return void 
+         * @static 
+         */
+        public static function creating($callback, $priority = 0){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            \YCMS\Models\YCMS::creating($callback, $priority);
+        }
+        
+        /**
+         * Register a created model event with the dispatcher.
+         *
+         * @param \Closure|string $callback
+         * @param int $priority
+         * @return void 
+         * @static 
+         */
+        public static function created($callback, $priority = 0){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            \YCMS\Models\YCMS::created($callback, $priority);
+        }
+        
+        /**
+         * Register a deleting model event with the dispatcher.
+         *
+         * @param \Closure|string $callback
+         * @param int $priority
+         * @return void 
+         * @static 
+         */
+        public static function deleting($callback, $priority = 0){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            \YCMS\Models\YCMS::deleting($callback, $priority);
+        }
+        
+        /**
+         * Register a deleted model event with the dispatcher.
+         *
+         * @param \Closure|string $callback
+         * @param int $priority
+         * @return void 
+         * @static 
+         */
+        public static function deleted($callback, $priority = 0){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            \YCMS\Models\YCMS::deleted($callback, $priority);
+        }
+        
+        /**
+         * Remove all of the event listeners for the model.
+         *
+         * @return void 
+         * @static 
+         */
+        public static function flushEventListeners(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            \YCMS\Models\YCMS::flushEventListeners();
+        }
+        
+        /**
+         * Get the observable event names.
+         *
+         * @return array 
+         * @static 
+         */
+        public static function getObservableEvents(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::getObservableEvents();
+        }
+        
+        /**
+         * Set the observable event names.
+         *
+         * @param array $observables
+         * @return void 
+         * @static 
+         */
+        public static function setObservableEvents($observables){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            \YCMS\Models\YCMS::setObservableEvents($observables);
+        }
+        
+        /**
+         * Add an observable event name.
+         *
+         * @param mixed $observables
+         * @return void 
+         * @static 
+         */
+        public static function addObservableEvents($observables){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            \YCMS\Models\YCMS::addObservableEvents($observables);
+        }
+        
+        /**
+         * Remove an observable event name.
+         *
+         * @param mixed $observables
+         * @return void 
+         * @static 
+         */
+        public static function removeObservableEvents($observables){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            \YCMS\Models\YCMS::removeObservableEvents($observables);
+        }
+        
+        /**
+         * Update the model in the database.
+         *
+         * @param array $attributes
+         * @return bool|int 
+         * @static 
+         */
+        public static function update($attributes = array()){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::update($attributes);
+        }
+        
+        /**
+         * Save the model and all of its relationships.
+         *
+         * @return bool 
+         * @static 
+         */
+        public static function push(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::push();
+        }
+        
+        /**
+         * Save the model to the database.
+         *
+         * @param array $options
+         * @return bool 
+         * @static 
+         */
+        public static function save($options = array()){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::save($options);
+        }
+        
+        /**
+         * Touch the owning relations of the model.
+         *
+         * @return void 
+         * @static 
+         */
+        public static function touchOwners(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            \YCMS\Models\YCMS::touchOwners();
+        }
+        
+        /**
+         * Determine if the model touches a given relation.
+         *
+         * @param string $relation
+         * @return bool 
+         * @static 
+         */
+        public static function touches($relation){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::touches($relation);
+        }
+        
+        /**
+         * Update the model's update timestamp.
+         *
+         * @return bool 
+         * @static 
+         */
+        public static function touch(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::touch();
+        }
+        
+        /**
+         * Set the value of the "created at" attribute.
+         *
+         * @param mixed $value
+         * @return void 
+         * @static 
+         */
+        public static function setCreatedAt($value){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            \YCMS\Models\YCMS::setCreatedAt($value);
+        }
+        
+        /**
+         * Set the value of the "updated at" attribute.
+         *
+         * @param mixed $value
+         * @return void 
+         * @static 
+         */
+        public static function setUpdatedAt($value){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            \YCMS\Models\YCMS::setUpdatedAt($value);
+        }
+        
+        /**
+         * Get the name of the "created at" column.
+         *
+         * @return string 
+         * @static 
+         */
+        public static function getCreatedAtColumn(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::getCreatedAtColumn();
+        }
+        
+        /**
+         * Get the name of the "updated at" column.
+         *
+         * @return string 
+         * @static 
+         */
+        public static function getUpdatedAtColumn(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::getUpdatedAtColumn();
+        }
+        
+        /**
+         * Get a fresh timestamp for the model.
+         *
+         * @return \Carbon\Carbon 
+         * @static 
+         */
+        public static function freshTimestamp(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::freshTimestamp();
+        }
+        
+        /**
+         * Get a fresh timestamp for the model.
+         *
+         * @return string 
+         * @static 
+         */
+        public static function freshTimestampString(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::freshTimestampString();
+        }
+        
+        /**
+         * Get a new query builder for the model's table.
+         *
+         * @return \Illuminate\Database\Eloquent\Builder 
+         * @static 
+         */
+        public static function newQuery(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::newQuery();
+        }
+        
+        /**
+         * Get a new query instance without a given scope.
+         *
+         * @param \Illuminate\Database\Eloquent\ScopeInterface $scope
+         * @return \Illuminate\Database\Eloquent\Builder 
+         * @static 
+         */
+        public static function newQueryWithoutScope($scope){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::newQueryWithoutScope($scope);
+        }
+        
+        /**
+         * Get a new query builder that doesn't have any global scopes.
+         *
+         * @return \Illuminate\Database\Eloquent\Builder|static 
+         * @static 
+         */
+        public static function newQueryWithoutScopes(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::newQueryWithoutScopes();
+        }
+        
+        /**
+         * Apply all of the global scopes to an Eloquent builder.
+         *
+         * @param \Illuminate\Database\Eloquent\Builder $builder
+         * @return \Illuminate\Database\Eloquent\Builder 
+         * @static 
+         */
+        public static function applyGlobalScopes($builder){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::applyGlobalScopes($builder);
+        }
+        
+        /**
+         * Remove all of the global scopes from an Eloquent builder.
+         *
+         * @param \Illuminate\Database\Eloquent\Builder $builder
+         * @return \Illuminate\Database\Eloquent\Builder 
+         * @static 
+         */
+        public static function removeGlobalScopes($builder){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::removeGlobalScopes($builder);
+        }
+        
+        /**
+         * Create a new Eloquent query builder for the model.
+         *
+         * @param \Illuminate\Database\Query\Builder $query
+         * @return \Illuminate\Database\Eloquent\Builder|static 
+         * @static 
+         */
+        public static function newEloquentBuilder($query){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::newEloquentBuilder($query);
+        }
+        
+        /**
+         * Create a new Eloquent Collection instance.
+         *
+         * @param array $models
+         * @return \Illuminate\Database\Eloquent\Collection 
+         * @static 
+         */
+        public static function newCollection($models = array()){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::newCollection($models);
+        }
+        
+        /**
+         * Create a new pivot model instance.
+         *
+         * @param \Illuminate\Database\Eloquent\Model $parent
+         * @param array $attributes
+         * @param string $table
+         * @param bool $exists
+         * @return \Illuminate\Database\Eloquent\Relations\Pivot 
+         * @static 
+         */
+        public static function newPivot($parent, $attributes, $table, $exists){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::newPivot($parent, $attributes, $table, $exists);
+        }
+        
+        /**
+         * Get the table associated with the model.
+         *
+         * @return string 
+         * @static 
+         */
+        public static function getTable(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::getTable();
+        }
+        
+        /**
+         * Set the table associated with the model.
+         *
+         * @param string $table
+         * @return void 
+         * @static 
+         */
+        public static function setTable($table){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            \YCMS\Models\YCMS::setTable($table);
+        }
+        
+        /**
+         * Get the value of the model's primary key.
+         *
+         * @return mixed 
+         * @static 
+         */
+        public static function getKey(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::getKey();
+        }
+        
+        /**
+         * Get the queueable identity for the entity.
+         *
+         * @return mixed 
+         * @static 
+         */
+        public static function getQueueableId(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::getQueueableId();
+        }
+        
+        /**
+         * Get the primary key for the model.
+         *
+         * @return string 
+         * @static 
+         */
+        public static function getKeyName(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::getKeyName();
+        }
+        
+        /**
+         * Set the primary key for the model.
+         *
+         * @param string $key
+         * @return void 
+         * @static 
+         */
+        public static function setKeyName($key){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            \YCMS\Models\YCMS::setKeyName($key);
+        }
+        
+        /**
+         * Get the table qualified key name.
+         *
+         * @return string 
+         * @static 
+         */
+        public static function getQualifiedKeyName(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::getQualifiedKeyName();
+        }
+        
+        /**
+         * Get the value of the model's route key.
+         *
+         * @return mixed 
+         * @static 
+         */
+        public static function getRouteKey(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::getRouteKey();
+        }
+        
+        /**
+         * Get the route key for the model.
+         *
+         * @return string 
+         * @static 
+         */
+        public static function getRouteKeyName(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::getRouteKeyName();
+        }
+        
+        /**
+         * Determine if the model uses timestamps.
+         *
+         * @return bool 
+         * @static 
+         */
+        public static function usesTimestamps(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::usesTimestamps();
+        }
+        
+        /**
+         * Get the class name for polymorphic relations.
+         *
+         * @return string 
+         * @static 
+         */
+        public static function getMorphClass(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::getMorphClass();
+        }
+        
+        /**
+         * Get the number of models to return per page.
+         *
+         * @return int 
+         * @static 
+         */
+        public static function getPerPage(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::getPerPage();
+        }
+        
+        /**
+         * Set the number of models to return per page.
+         *
+         * @param int $perPage
+         * @return void 
+         * @static 
+         */
+        public static function setPerPage($perPage){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            \YCMS\Models\YCMS::setPerPage($perPage);
+        }
+        
+        /**
+         * Get the default foreign key name for the model.
+         *
+         * @return string 
+         * @static 
+         */
+        public static function getForeignKey(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::getForeignKey();
+        }
+        
+        /**
+         * Get the hidden attributes for the model.
+         *
+         * @return array 
+         * @static 
+         */
+        public static function getHidden(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::getHidden();
+        }
+        
+        /**
+         * Set the hidden attributes for the model.
+         *
+         * @param array $hidden
+         * @return void 
+         * @static 
+         */
+        public static function setHidden($hidden){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            \YCMS\Models\YCMS::setHidden($hidden);
+        }
+        
+        /**
+         * Add hidden attributes for the model.
+         *
+         * @param array|string|null $attributes
+         * @return void 
+         * @static 
+         */
+        public static function addHidden($attributes = null){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            \YCMS\Models\YCMS::addHidden($attributes);
+        }
+        
+        /**
+         * Get the visible attributes for the model.
+         *
+         * @return array 
+         * @static 
+         */
+        public static function getVisible(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::getVisible();
+        }
+        
+        /**
+         * Set the visible attributes for the model.
+         *
+         * @param array $visible
+         * @return void 
+         * @static 
+         */
+        public static function setVisible($visible){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            \YCMS\Models\YCMS::setVisible($visible);
+        }
+        
+        /**
+         * Add visible attributes for the model.
+         *
+         * @param array|string|null $attributes
+         * @return void 
+         * @static 
+         */
+        public static function addVisible($attributes = null){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            \YCMS\Models\YCMS::addVisible($attributes);
+        }
+        
+        /**
+         * Set the accessors to append to model arrays.
+         *
+         * @param array $appends
+         * @return void 
+         * @static 
+         */
+        public static function setAppends($appends){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            \YCMS\Models\YCMS::setAppends($appends);
+        }
+        
+        /**
+         * Get the fillable attributes for the model.
+         *
+         * @return array 
+         * @static 
+         */
+        public static function getFillable(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::getFillable();
+        }
+        
+        /**
+         * Set the fillable attributes for the model.
+         *
+         * @param array $fillable
+         * @return $this 
+         * @static 
+         */
+        public static function fillable($fillable){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::fillable($fillable);
+        }
+        
+        /**
+         * Get the guarded attributes for the model.
+         *
+         * @return array 
+         * @static 
+         */
+        public static function getGuarded(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::getGuarded();
+        }
+        
+        /**
+         * Set the guarded attributes for the model.
+         *
+         * @param array $guarded
+         * @return $this 
+         * @static 
+         */
+        public static function guard($guarded){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::guard($guarded);
+        }
+        
+        /**
+         * Disable all mass assignable restrictions.
+         *
+         * @param bool $state
+         * @return void 
+         * @static 
+         */
+        public static function unguard($state = true){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            \YCMS\Models\YCMS::unguard($state);
+        }
+        
+        /**
+         * Enable the mass assignment restrictions.
+         *
+         * @return void 
+         * @static 
+         */
+        public static function reguard(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            \YCMS\Models\YCMS::reguard();
+        }
+        
+        /**
+         * Determine if current state is "unguarded".
+         *
+         * @return bool 
+         * @static 
+         */
+        public static function isUnguarded(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::isUnguarded();
+        }
+        
+        /**
+         * Run the given callable while being unguarded.
+         *
+         * @param callable $callback
+         * @return mixed 
+         * @static 
+         */
+        public static function unguarded($callback){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::unguarded($callback);
+        }
+        
+        /**
+         * Determine if the given attribute may be mass assigned.
+         *
+         * @param string $key
+         * @return bool 
+         * @static 
+         */
+        public static function isFillable($key){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::isFillable($key);
+        }
+        
+        /**
+         * Determine if the given key is guarded.
+         *
+         * @param string $key
+         * @return bool 
+         * @static 
+         */
+        public static function isGuarded($key){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::isGuarded($key);
+        }
+        
+        /**
+         * Determine if the model is totally guarded.
+         *
+         * @return bool 
+         * @static 
+         */
+        public static function totallyGuarded(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::totallyGuarded();
+        }
+        
+        /**
+         * Get the relationships that are touched on save.
+         *
+         * @return array 
+         * @static 
+         */
+        public static function getTouchedRelations(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::getTouchedRelations();
+        }
+        
+        /**
+         * Set the relationships that are touched on save.
+         *
+         * @param array $touches
+         * @return void 
+         * @static 
+         */
+        public static function setTouchedRelations($touches){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            \YCMS\Models\YCMS::setTouchedRelations($touches);
+        }
+        
+        /**
+         * Get the value indicating whether the IDs are incrementing.
+         *
+         * @return bool 
+         * @static 
+         */
+        public static function getIncrementing(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::getIncrementing();
+        }
+        
+        /**
+         * Set whether IDs are incrementing.
+         *
+         * @param bool $value
+         * @return void 
+         * @static 
+         */
+        public static function setIncrementing($value){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            \YCMS\Models\YCMS::setIncrementing($value);
+        }
+        
+        /**
+         * Convert the model instance to JSON.
+         *
+         * @param int $options
+         * @return string 
+         * @static 
+         */
+        public static function toJson($options = 0){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::toJson($options);
+        }
+        
+        /**
+         * Convert the object into something JSON serializable.
+         *
+         * @return array 
+         * @static 
+         */
+        public static function jsonSerialize(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::jsonSerialize();
+        }
+        
+        /**
+         * Convert the model instance to an array.
+         *
+         * @return array 
+         * @static 
+         */
+        public static function toArray(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::toArray();
+        }
+        
+        /**
+         * Convert the model's attributes to an array.
+         *
+         * @return array 
+         * @static 
+         */
+        public static function attributesToArray(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::attributesToArray();
+        }
+        
+        /**
+         * Get the model's relationships in array form.
+         *
+         * @return array 
+         * @static 
+         */
+        public static function relationsToArray(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::relationsToArray();
+        }
+        
+        /**
+         * Get an attribute from the model.
+         *
+         * @param string $key
+         * @return mixed 
+         * @static 
+         */
+        public static function getAttribute($key){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::getAttribute($key);
+        }
+        
+        /**
+         * Get a plain attribute (not a relationship).
+         *
+         * @param string $key
+         * @return mixed 
+         * @static 
+         */
+        public static function getAttributeValue($key){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::getAttributeValue($key);
+        }
+        
+        /**
+         * Get a relationship.
+         *
+         * @param string $key
+         * @return mixed 
+         * @static 
+         */
+        public static function getRelationValue($key){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::getRelationValue($key);
+        }
+        
+        /**
+         * Determine if a get mutator exists for an attribute.
+         *
+         * @param string $key
+         * @return bool 
+         * @static 
+         */
+        public static function hasGetMutator($key){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::hasGetMutator($key);
+        }
+        
+        /**
+         * Set a given attribute on the model.
+         *
+         * @param string $key
+         * @param mixed $value
+         * @return void 
+         * @static 
+         */
+        public static function setAttribute($key, $value){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            \YCMS\Models\YCMS::setAttribute($key, $value);
+        }
+        
+        /**
+         * Determine if a set mutator exists for an attribute.
+         *
+         * @param string $key
+         * @return bool 
+         * @static 
+         */
+        public static function hasSetMutator($key){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::hasSetMutator($key);
+        }
+        
+        /**
+         * Get the attributes that should be converted to dates.
+         *
+         * @return array 
+         * @static 
+         */
+        public static function getDates(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::getDates();
+        }
+        
+        /**
+         * Convert a DateTime to a storable string.
+         *
+         * @param \DateTime|int $value
+         * @return string 
+         * @static 
+         */
+        public static function fromDateTime($value){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::fromDateTime($value);
+        }
+        
+        /**
+         * Set the date format used by the model.
+         *
+         * @param string $format
+         * @return $this 
+         * @static 
+         */
+        public static function setDateFormat($format){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::setDateFormat($format);
+        }
+        
+        /**
+         * Clone the model into a new, non-existing instance.
+         *
+         * @param array $except
+         * @return \Illuminate\Database\Eloquent\Model 
+         * @static 
+         */
+        public static function replicate($except = null){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::replicate($except);
+        }
+        
+        /**
+         * Get all of the current attributes on the model.
+         *
+         * @return array 
+         * @static 
+         */
+        public static function getAttributes(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::getAttributes();
+        }
+        
+        /**
+         * Set the array of model attributes. No checking is done.
+         *
+         * @param array $attributes
+         * @param bool $sync
+         * @return void 
+         * @static 
+         */
+        public static function setRawAttributes($attributes, $sync = false){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            \YCMS\Models\YCMS::setRawAttributes($attributes, $sync);
+        }
+        
+        /**
+         * Get the model's original attribute values.
+         *
+         * @param string $key
+         * @param mixed $default
+         * @return array 
+         * @static 
+         */
+        public static function getOriginal($key = null, $default = null){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::getOriginal($key, $default);
+        }
+        
+        /**
+         * Sync the original attributes with the current.
+         *
+         * @return $this 
+         * @static 
+         */
+        public static function syncOriginal(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::syncOriginal();
+        }
+        
+        /**
+         * Sync a single original attribute with its current value.
+         *
+         * @param string $attribute
+         * @return $this 
+         * @static 
+         */
+        public static function syncOriginalAttribute($attribute){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::syncOriginalAttribute($attribute);
+        }
+        
+        /**
+         * Determine if the model or given attribute(s) have been modified.
+         *
+         * @param array|string|null $attributes
+         * @return bool 
+         * @static 
+         */
+        public static function isDirty($attributes = null){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::isDirty($attributes);
+        }
+        
+        /**
+         * Get the attributes that have been changed since last sync.
+         *
+         * @return array 
+         * @static 
+         */
+        public static function getDirty(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::getDirty();
+        }
+        
+        /**
+         * Get all the loaded relations for the instance.
+         *
+         * @return array 
+         * @static 
+         */
+        public static function getRelations(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::getRelations();
+        }
+        
+        /**
+         * Get a specified relationship.
+         *
+         * @param string $relation
+         * @return mixed 
+         * @static 
+         */
+        public static function getRelation($relation){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::getRelation($relation);
+        }
+        
+        /**
+         * Determine if the given relation is loaded.
+         *
+         * @param string $key
+         * @return bool 
+         * @static 
+         */
+        public static function relationLoaded($key){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::relationLoaded($key);
+        }
+        
+        /**
+         * Set the specific relationship in the model.
+         *
+         * @param string $relation
+         * @param mixed $value
+         * @return $this 
+         * @static 
+         */
+        public static function setRelation($relation, $value){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::setRelation($relation, $value);
+        }
+        
+        /**
+         * Set the entire relations array on the model.
+         *
+         * @param array $relations
+         * @return $this 
+         * @static 
+         */
+        public static function setRelations($relations){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::setRelations($relations);
+        }
+        
+        /**
+         * Get the database connection for the model.
+         *
+         * @return \Illuminate\Database\Connection 
+         * @static 
+         */
+        public static function getConnection(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::getConnection();
+        }
+        
+        /**
+         * Get the current connection name for the model.
+         *
+         * @return string 
+         * @static 
+         */
+        public static function getConnectionName(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::getConnectionName();
+        }
+        
+        /**
+         * Set the connection associated with the model.
+         *
+         * @param string $name
+         * @return $this 
+         * @static 
+         */
+        public static function setConnection($name){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::setConnection($name);
+        }
+        
+        /**
+         * Resolve a connection instance.
+         *
+         * @param string $connection
+         * @return \Illuminate\Database\Connection 
+         * @static 
+         */
+        public static function resolveConnection($connection = null){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::resolveConnection($connection);
+        }
+        
+        /**
+         * Get the connection resolver instance.
+         *
+         * @return \Illuminate\Database\ConnectionResolverInterface 
+         * @static 
+         */
+        public static function getConnectionResolver(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::getConnectionResolver();
+        }
+        
+        /**
+         * Set the connection resolver instance.
+         *
+         * @param \Illuminate\Database\ConnectionResolverInterface $resolver
+         * @return void 
+         * @static 
+         */
+        public static function setConnectionResolver($resolver){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            \YCMS\Models\YCMS::setConnectionResolver($resolver);
+        }
+        
+        /**
+         * Unset the connection resolver for models.
+         *
+         * @return void 
+         * @static 
+         */
+        public static function unsetConnectionResolver(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            \YCMS\Models\YCMS::unsetConnectionResolver();
+        }
+        
+        /**
+         * Get the event dispatcher instance.
+         *
+         * @return \Illuminate\Contracts\Events\Dispatcher 
+         * @static 
+         */
+        public static function getEventDispatcher(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::getEventDispatcher();
+        }
+        
+        /**
+         * Set the event dispatcher instance.
+         *
+         * @param \Illuminate\Contracts\Events\Dispatcher $dispatcher
+         * @return void 
+         * @static 
+         */
+        public static function setEventDispatcher($dispatcher){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            \YCMS\Models\YCMS::setEventDispatcher($dispatcher);
+        }
+        
+        /**
+         * Unset the event dispatcher for models.
+         *
+         * @return void 
+         * @static 
+         */
+        public static function unsetEventDispatcher(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            \YCMS\Models\YCMS::unsetEventDispatcher();
+        }
+        
+        /**
+         * Get the mutated attributes for a given instance.
+         *
+         * @return array 
+         * @static 
+         */
+        public static function getMutatedAttributes(){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::getMutatedAttributes();
+        }
+        
+        /**
+         * Extract and cache all the mutated attributes of a class.
+         *
+         * @param string $class
+         * @return void 
+         * @static 
+         */
+        public static function cacheMutatedAttributes($class){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            \YCMS\Models\YCMS::cacheMutatedAttributes($class);
+        }
+        
+        /**
+         * Determine if the given attribute exists.
+         *
+         * @param mixed $offset
+         * @return bool 
+         * @static 
+         */
+        public static function offsetExists($offset){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::offsetExists($offset);
+        }
+        
+        /**
+         * Get the value for a given offset.
+         *
+         * @param mixed $offset
+         * @return mixed 
+         * @static 
+         */
+        public static function offsetGet($offset){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            return \YCMS\Models\YCMS::offsetGet($offset);
+        }
+        
+        /**
+         * Set the value for a given offset.
+         *
+         * @param mixed $offset
+         * @param mixed $value
+         * @return void 
+         * @static 
+         */
+        public static function offsetSet($offset, $value){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            \YCMS\Models\YCMS::offsetSet($offset, $value);
+        }
+        
+        /**
+         * Unset the value for a given offset.
+         *
+         * @param mixed $offset
+         * @return void 
+         * @static 
+         */
+        public static function offsetUnset($offset){
+            //Method inherited from \Illuminate\Database\Eloquent\Model            
+            \YCMS\Models\YCMS::offsetUnset($offset);
         }
         
     }

@@ -20,7 +20,6 @@ Route::get('/', function () {
 
 //added some test routes
 
-
 #对后台开启csrf过滤
 Route::when('admin/*', 'csrf', ['post', 'delete', 'put']);
 

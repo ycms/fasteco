@@ -9,11 +9,11 @@
 
 use Illuminate\Support\Facades\Facade;
 
-class Y extends Facade
+class YCMS extends Facade
 {
     /**
      * @return string
      */
-    protected static function getFacadeAccessor() { return 'Y'; }
+    protected static function getFacadeAccessor() { return 'YCMS'; }
 }
 

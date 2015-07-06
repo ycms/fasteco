@@ -25,7 +25,7 @@ class YCMSServiceProvider extends ServiceProvider
     public function register()
     {
         //
-        $this->app->bind('Y', function () {
+        $this->app->bind('YCMS', function () {
             return new YCMS;
         });
     }
