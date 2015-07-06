@@ -222,7 +222,7 @@ return [
         /*
          * Append
          */
-        'Module'    => Pingpong\Modules\Facades\Module::class,
+        'Module'    => YCMS\Modules\Facades\Module::class,
 
     ],
 

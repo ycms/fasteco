@@ -121,7 +121,7 @@ return [
     */
 
     'scan' => [
-        'enabled' => false,
+        'enabled' => true,
         'paths' => [
             dirname(base_path()).'/vendor/*/*',
         ],
