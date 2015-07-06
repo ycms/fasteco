@@ -6,6 +6,9 @@ use Illuminate\Support\ServiceProvider;
 use YCMS\Extensions\DouyasiBlade;
 use View;
 use Illuminate\Support\MessageBag;
+use YCMS\Facades\YCMS;
+
+use YCMS\Extensions\Blade;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -17,7 +20,21 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        Blade::register();
         DouyasiBlade::register();
+
+        if(class_exists('\Corcel\Database')){
+            \Corcel\Database::connect([
+                'host'     => getenv('DB_HOST'),
+                'database' => getenv('DB_NAME'),
+                'username' => getenv('DB_USER'),
+                'password' => getenv('DB_PASSWORD'),
+                'prefix'   => 'wp_',
+            ]);
+        }
+
+
+
     }
 
     /**

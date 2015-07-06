@@ -1,6 +1,8 @@
 <?php
 
-require_once dirname(__DIR__).'/vendor/autoload.php';
+if(!defined('WP_ONLY')){
+    require_once dirname(__DIR__) . '/index.php';
+}
 
 define('WP_ALLOW_MULTISITE', true);
 
@@ -116,4 +118,4 @@ if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');
 
 /** 设置WordPress变量和包含文件。 */
-require_once(ABSPATH . 'wp-settings.php');
+require_once(__DIR__ . '/wp.php');

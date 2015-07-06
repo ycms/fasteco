@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: Mo
@@ -6,9 +7,10 @@
  * Time: 下午2:38
  */
 
-require_once __DIR__ . '/Extensions/Func.php';
+require_once __DIR__ . '/../Extensions/Func.php';
 
 use YCMS\Extensions\Func;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -149,7 +151,7 @@ Func::make('page_links', function () {
     /**
      * 芽丝CMF后台分页helper
      *
-     * @param Illuminate\Support\Collection $model
+     * @param \Illuminate\Support\Collection $model
      * @param array                         $data 追加的参数数组
      * @return string 返回分页
      */
@@ -337,6 +339,8 @@ Func::make('asset', function () {
      */
     function asset($path, $secure = null)
     {
+
         return app('url')->asset('static/' . preg_replace("/^static\//", '', $path), $secure);
     }
 });
+
