@@ -11,7 +11,7 @@
   "license": "BSD-3-Clause",
   "authors": [
     {
-      "name": "Pingpong Labs",
+      "name": "YCMS Labs",
       "email": "pingpong.labs@gmail.com"
     }
   ],
@@ -28,7 +28,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Pingpong\\Modules\\": ""
+      "YCMS\\Modules\\": ""
     }
   },
   "minimum-stability": "stable"

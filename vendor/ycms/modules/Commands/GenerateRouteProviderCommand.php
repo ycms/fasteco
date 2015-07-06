@@ -1,9 +1,9 @@
 <?php
 
-namespace Pingpong\Modules\Commands;
+namespace YCMS\Modules\Commands;
 
 use Pingpong\Support\Stub;
-use Pingpong\Modules\Traits\ModuleCommandTrait;
+use YCMS\Modules\Traits\ModuleCommandTrait;
 use Symfony\Component\Console\Input\InputArgument;
 
 class GenerateRouteProviderCommand extends GeneratorCommand

@@ -1,11 +1,11 @@
 <?php
 
-namespace Pingpong\Modules\Commands;
+namespace YCMS\Modules\Commands;
 
 use Illuminate\Console\Command;
-use Pingpong\Modules\Module;
-use Pingpong\Modules\Publishing\AssetPublisher;
-use Pingpong\Modules\Publishing\LangPublisher;
+use YCMS\Modules\Module;
+use YCMS\Modules\Publishing\AssetPublisher;
+use YCMS\Modules\Publishing\LangPublisher;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 

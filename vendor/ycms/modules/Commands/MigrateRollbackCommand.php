@@ -1,10 +1,10 @@
 <?php
 
-namespace Pingpong\Modules\Commands;
+namespace YCMS\Modules\Commands;
 
 use Illuminate\Console\Command;
-use Pingpong\Modules\Migrations\Migrator;
-use Pingpong\Modules\Traits\MigrationLoaderTrait;
+use YCMS\Modules\Migrations\Migrator;
+use YCMS\Modules\Traits\MigrationLoaderTrait;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 

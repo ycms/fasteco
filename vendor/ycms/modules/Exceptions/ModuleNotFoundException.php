@@ -1,6 +1,6 @@
 <?php
 
-namespace Pingpong\Modules\Exceptions;
+namespace YCMS\Modules\Exceptions;
 
 class ModuleNotFoundException extends \Exception
 {

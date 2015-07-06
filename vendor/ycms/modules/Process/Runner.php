@@ -1,23 +1,23 @@
 <?php
 
-namespace Pingpong\Modules\Process;
+namespace YCMS\Modules\Process;
 
-use Pingpong\Modules\Contracts\RunableInterface;
-use Pingpong\Modules\Repository;
+use YCMS\Modules\Contracts\RunableInterface;
+use YCMS\Modules\Repository;
 
 class Runner implements RunableInterface
 {
     /**
      * The module instance.
      *
-     * @var \Pingpong\Modules\Repository
+     * @var \YCMS\Modules\Repository
      */
     protected $module;
 
     /**
      * The constructor.
      *
-     * @param \Pingpong\Modules\Repository $module
+     * @param \YCMS\Modules\Repository $module
      */
     public function __construct(Repository $module)
     {

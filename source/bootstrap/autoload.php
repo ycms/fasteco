@@ -16,6 +16,9 @@ define('LARAVEL_START', microtime(true));
 
 require __DIR__ . '/../app/functions.php'; // 引入自定义helper函数库
 
+# 测试环境开发包
+# require dirname(__DIR__) . '/../components/vendor/autoload.php';
+
 require dirname(__DIR__).'/../vendor/autoload.php';
 
 /*

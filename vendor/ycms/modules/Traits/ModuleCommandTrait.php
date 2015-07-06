@@ -1,6 +1,6 @@
 <?php
 
-namespace Pingpong\Modules\Traits;
+namespace YCMS\Modules\Traits;
 
 trait ModuleCommandTrait
 {

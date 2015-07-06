@@ -1,6 +1,6 @@
 <?php
 
-namespace Pingpong\Modules\Commands;
+namespace YCMS\Modules\Commands;
 
 use Illuminate\Console\Command;
 

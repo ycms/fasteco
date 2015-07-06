@@ -1,9 +1,9 @@
 <?php
 
-namespace Pingpong\Modules\Commands;
+namespace YCMS\Modules\Commands;
 
 use Illuminate\Console\Command;
-use Pingpong\Modules\Process\Installer;
+use YCMS\Modules\Process\Installer;
 use Pingpong\Support\Json;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;

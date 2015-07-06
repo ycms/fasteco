@@ -1,6 +1,6 @@
 <?php
 
-namespace Pingpong\Modules\Contracts;
+namespace YCMS\Modules\Contracts;
 
 interface RunableInterface
 {

@@ -24,7 +24,7 @@ return [
 
     'stubs' => [
         'enabled' => false,
-        'path' => base_path().'/vendor/pingpong/modules/src/Pingpong/Modules/Commands/stubs',
+        'path' => base_path().'/vendor/pingpong/modules/src/YCMS/Modules/Commands/stubs',
         'files' => [
             'start' => 'start.php',
             'routes' => 'Http/routes.php',
@@ -139,7 +139,7 @@ return [
     'composer' => [
         'vendor' => 'pingpong-modules',
         'author' => [
-            'name' => 'Pingpong Labs',
+            'name' => 'YCMS Labs',
             'email' => 'pingpong.labs@gmail.com',
         ],
     ],

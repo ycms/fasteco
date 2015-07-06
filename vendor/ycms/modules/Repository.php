@@ -1,14 +1,14 @@
 <?php
 
-namespace Pingpong\Modules;
+namespace YCMS\Modules;
 
 use Countable;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Str;
-use Pingpong\Modules\Contracts\RepositoryInterface;
-use Pingpong\Modules\Exceptions\ModuleNotFoundException;
-use Pingpong\Modules\Process\Installer;
-use Pingpong\Modules\Process\Updater;
+use YCMS\Modules\Contracts\RepositoryInterface;
+use YCMS\Modules\Exceptions\ModuleNotFoundException;
+use YCMS\Modules\Process\Installer;
+use YCMS\Modules\Process\Updater;
 
 class Repository implements RepositoryInterface, Countable
 {

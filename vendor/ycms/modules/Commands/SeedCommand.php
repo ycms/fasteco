@@ -1,10 +1,10 @@
 <?php
 
-namespace Pingpong\Modules\Commands;
+namespace YCMS\Modules\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
-use Pingpong\Modules\Traits\ModuleCommandTrait;
+use YCMS\Modules\Traits\ModuleCommandTrait;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 

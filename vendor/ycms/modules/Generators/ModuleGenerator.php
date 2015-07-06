@@ -1,13 +1,13 @@
 <?php
 
-namespace Pingpong\Modules\Generators;
+namespace YCMS\Modules\Generators;
 
 use Illuminate\Config\Repository as Config;
 use Illuminate\Console\Command as Console;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Str;
 use Pingpong\Support\Stub;
-use Pingpong\Modules\Repository;
+use YCMS\Modules\Repository;
 
 class ModuleGenerator extends Generator
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace Pingpong\Modules\Commands;
+namespace YCMS\Modules\Commands;
 
 use Illuminate\Console\Command;
-use Pingpong\Modules\Generators\FileAlreadyExistException;
-use Pingpong\Modules\Generators\FileGenerator;
+use YCMS\Modules\Generators\FileAlreadyExistException;
+use YCMS\Modules\Generators\FileGenerator;
 
 abstract class GeneratorCommand extends Command
 {
@@ -74,7 +74,7 @@ abstract class GeneratorCommand extends Command
     /**
      * Get class namespace.
      *
-     * @param \Pingpong\Module\Module $module
+     * @param \YCMS\Module\Module $module
      *
      * @return string
      */

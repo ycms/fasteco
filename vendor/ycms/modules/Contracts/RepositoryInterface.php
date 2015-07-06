@@ -1,6 +1,6 @@
 <?php
 
-namespace Pingpong\Modules\Contracts;
+namespace YCMS\Modules\Contracts;
 
 interface RepositoryInterface
 {
@@ -28,7 +28,7 @@ interface RepositoryInterface
     /**
      * Get modules as modules collection instance.
      *
-     * @return \Pingpong\Modules\Collection
+     * @return \YCMS\Modules\Collection
      */
     public function toCollection();
 

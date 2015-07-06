@@ -1,6 +1,6 @@
 <?php
 
-namespace Pingpong\Modules\Process;
+namespace YCMS\Modules\Process;
 
 class Updater extends Runner
 {

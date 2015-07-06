@@ -1,6 +1,6 @@
 <?php
 
-namespace Pingpong\Modules\Providers;
+namespace YCMS\Modules\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

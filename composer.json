@@ -25,7 +25,8 @@
     "illuminate/html": "^5.0@dev",
     "ycms/modules": "dev-master",
     "ycms/krumo": "^0.5.0",
-    "ycms/tpl": "*@dev"
+    "ycms/tpl": "*@dev",
+    "ycms/module-main": "*@dev"
   },
   "require-dev": {
     "fzaninotto/faker": "~1.4",
@@ -43,8 +44,8 @@
     ],
     "psr-4": {
       "YCMS\\": "source/app/",
-      "Modules\\": "source/modules/",
-      "App\\":"app/"
+      "App\\": "source/modules/",
+      "YC\\":"app/"
     }
   },
   "autoload-dev": {

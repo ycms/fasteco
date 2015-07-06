@@ -1,15 +1,15 @@
 <?php
 
-namespace Pingpong\Modules\Migrations;
+namespace YCMS\Modules\Migrations;
 
-use Pingpong\Modules\Module;
+use YCMS\Modules\Module;
 
 class Migrator
 {
     /**
-     * Pingpong Module instance.
+     * YCMS Module instance.
      *
-     * @var \Pingpong\Modules\Module
+     * @var \YCMS\Modules\Module
      */
     protected $module;
 
@@ -23,7 +23,7 @@ class Migrator
     /**
      * Create new instance.
      *
-     * @param \Pingpong\Modules\Module $module
+     * @param \YCMS\Modules\Module $module
      */
     public function __construct(Module $module)
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Pingpong\Modules;
+namespace YCMS\Modules;
 
 use Illuminate\Filesystem\Filesystem;
 use Symfony\Component\Finder\Finder;
