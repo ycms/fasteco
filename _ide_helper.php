@@ -12130,7 +12130,8 @@ namespace {
          * Find a specific module.
          *
          * @param $name
-         * @static 
+         * @static
+         * @return \YCMS\Modules\Module
          */
         public static function find($name){
             return \YCMS\Modules\Repository::find($name);
