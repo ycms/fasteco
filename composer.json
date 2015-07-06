@@ -28,7 +28,8 @@
     "ycms/tpl": "*@dev",
     "ycms/module-main": "*@dev",
     "jgrossi/corcel": "*@dev",
-    "guzzlehttp/guzzle": "^6.0"
+    "guzzlehttp/guzzle": "^6.0",
+    "ycms/theme-base": "*@dev"
   },
   "require-dev": {
     "fzaninotto/faker": "~1.4",

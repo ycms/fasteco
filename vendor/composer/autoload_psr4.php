@@ -10,6 +10,7 @@ return array(
     'Zhuzhichao\\IpLocationZh\\' => array($vendorDir . '/zhuzhichao/ip-location-zh/src'),
     'YC\\Tpl\\' => array($vendorDir . '/ycms/tpl'),
     'YC\\Main\\' => array($vendorDir . '/ycms/module-main'),
+    'YC\\Base\\' => array($vendorDir . '/ycms/theme-base'),
     'YC\\' => array($baseDir . '/app'),
     'YCMS\\Modules\\' => array($vendorDir . '/ycms/modules'),
     'YCMS\\' => array($baseDir . '/source/app'),

@@ -2830,7 +2830,7 @@
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/ycms/tpl/zipball/b059a2b03adb03504b6496fd7aa7117a18e433c2",
+            "url": "https://api.github.com/repos/ycms/tpl/zipball/5fc199053fb5603492a2a2384aa223a6f1052ea7",
             "reference": "b059a2b03adb03504b6496fd7aa7117a18e433c2",
             "shasum": ""
         },
@@ -2861,7 +2861,7 @@
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/ycms/module-main/zipball/748a3583e3205b81ae94a5316ba529f97510dc28",
+            "url": "https://api.github.com/repos/ycms/module-main/zipball/09ab26bedfa4fc72b61833b12de0b275edf83e4f",
             "reference": "748a3583e3205b81ae94a5316ba529f97510dc28",
             "shasum": ""
         },
@@ -5032,6 +5032,37 @@
             "http client",
             "rest",
             "web service"
+        ]
+    },
+    {
+        "name": "ycms/theme-base",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ycms/theme-base.git",
+            "reference": "2b41774dc9c01bc0a415c9e49f5d6f79054c5f89"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ycms/theme-base/zipball/2b41774dc9c01bc0a415c9e49f5d6f79054c5f89",
+            "reference": "2b41774dc9c01bc0a415c9e49f5d6f79054c5f89",
+            "shasum": ""
+        },
+        "time": "2015-07-06 18:10:44",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "YC\\Base\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "authors": [
+            {
+                "name": "YCMS Labs",
+                "email": "ycms.net@gmail.com"
+            }
         ]
     }
 ]
