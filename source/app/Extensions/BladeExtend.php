@@ -4,7 +4,7 @@
  * @author moshihui <86146002@qq.com>
  * 2015/4/11 17:10
  */
-class Blade
+class BladeExtend
 {
 
     static $compiles = [

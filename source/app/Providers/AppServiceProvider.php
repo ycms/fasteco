@@ -7,6 +7,7 @@ use YCMS\Extensions\DouyasiBlade;
 use View;
 use Illuminate\Support\MessageBag;
 use YCMS\Facades\YCMS;
+use YCMS\Extensions\BladeExtend;
 
 
 class AppServiceProvider extends ServiceProvider
@@ -19,8 +20,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
-        \YCMS\Extensions\Blade::register();
         DouyasiBlade::register();
+        BladeExtend::register();
 
         if(class_exists('\Corcel\Database')){
             \Corcel\Database::connect([
