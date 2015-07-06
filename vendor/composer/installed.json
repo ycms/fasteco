@@ -3580,155 +3580,6 @@
         ]
     },
     {
-        "name": "cartalyst/sentry",
-        "version": "dev-feature/laravel-5",
-        "version_normalized": "dev-feature/laravel-5",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/cartalyst/sentry.git",
-            "reference": "092192e969520bb287b402fbe77ab070d4267910"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/cartalyst/sentry/zipball/092192e969520bb287b402fbe77ab070d4267910",
-            "reference": "092192e969520bb287b402fbe77ab070d4267910",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.3"
-        },
-        "require-dev": {
-            "illuminate/cookie": "~4.0|~5.0",
-            "illuminate/database": "~4.0|~5.0",
-            "illuminate/http": "~4.0|~5.0",
-            "illuminate/session": "~4.0|~5.0",
-            "ircmaxell/password-compat": "1.0.*",
-            "mockery/mockery": "0.9.*"
-        },
-        "suggest": {
-            "happydemon/txt": "Required Text helpers when using the Kohana implementation",
-            "illuminate/database": "Default sentry user, group and throttling implementations.",
-            "ircmaxell/password-compat": "Default hashing uses PHP 5.5 password_* functions, with forward-compatible support."
-        },
-        "time": "2015-04-20 12:47:58",
-        "type": "library",
-        "extra": {
-            "component": "package",
-            "frameworks": [
-                "Laravel 3",
-                "Laravel 4",
-                "CodeIgniter 3",
-                "FuelPHP 1",
-                "Kohana"
-            ],
-            "versions": {
-                "1": "1.1/master",
-                "2": "master"
-            },
-            "branch-alias": {
-                "dev-master": "2.2.x-dev"
-            }
-        },
-        "installation-source": "source",
-        "autoload": {
-            "classmap": [
-                "src/Cartalyst/Sentry/Groups/Exceptions.php",
-                "src/Cartalyst/Sentry/Throttling/Exceptions.php",
-                "src/Cartalyst/Sentry/Users/Exceptions.php",
-                "src/migrations"
-            ],
-            "psr-0": {
-                "Cartalyst\\Sentry": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Ben Corlett",
-                "email": "ben.corlett@cartalyst.com",
-                "role": "Developer"
-            },
-            {
-                "name": "Cartalyst LLC",
-                "email": "help@cartalyst.com"
-            },
-            {
-                "name": "Bruno Gaspar",
-                "email": "bruno.gaspar@cartalyst.com",
-                "role": "Developer"
-            },
-            {
-                "name": "Dan Syme",
-                "email": "dan.syme@cartalyst.com",
-                "role": "Creator & Designer"
-            },
-            {
-                "name": "Daniel Petrie",
-                "email": "dan.petrie@cartalyst.com",
-                "role": "Developer"
-            }
-        ],
-        "description": "PHP 5.3+ Fully-featured Authentication & Authorization System",
-        "keywords": [
-            "auth",
-            "codeigniter",
-            "fuelphp",
-            "kohana",
-            "laravel",
-            "security"
-        ]
-    },
-    {
-        "name": "jenssegers/mongodb-sentry",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/jenssegers/laravel-mongodb-sentry.git",
-            "reference": "d43d372e8a119eae6ac4646ea330b21bc27e8576"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/jenssegers/laravel-mongodb-sentry/zipball/d43d372e8a119eae6ac4646ea330b21bc27e8576",
-            "reference": "d43d372e8a119eae6ac4646ea330b21bc27e8576",
-            "shasum": ""
-        },
-        "require": {
-            "cartalyst/sentry": "dev-feature/laravel-5",
-            "jenssegers/mongodb": "*",
-            "php": ">=5.3.0"
-        },
-        "time": "2015-03-21 19:22:15",
-        "type": "library",
-        "installation-source": "source",
-        "autoload": {
-            "psr-0": {
-                "Jenssegers\\Mongodb\\Sentry": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Jens Segers",
-                "homepage": "http://jenssegers.be"
-            }
-        ],
-        "description": "An extension for Laravel-MongoDB that lets you work with Sentry",
-        "keywords": [
-            "Authentication",
-            "laravel",
-            "mongo",
-            "mongodb",
-            "sentry"
-        ]
-    },
-    {
         "name": "nategood/httpful",
         "version": "0.2.19",
         "version_normalized": "0.2.19.0",
@@ -3826,61 +3677,6 @@
         "keywords": [
             "laravel",
             "ssh"
-        ]
-    },
-    {
-        "name": "oodle/krumo",
-        "version": "v0.5.0",
-        "version_normalized": "0.5.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/oodle/krumo.git",
-            "reference": "48239769290e267fd7d6ddd1c37e08f96b87221e"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/oodle/krumo/zipball/48239769290e267fd7d6ddd1c37e08f96b87221e",
-            "reference": "48239769290e267fd7d6ddd1c37e08f96b87221e",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.2.17"
-        },
-        "time": "2014-02-26 21:10:16",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "files": [
-                "class.krumo.php"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "LGPL"
-        ],
-        "authors": [
-            {
-                "name": "Kaloyan K. Tsvetkov",
-                "email": "kaloyan@kaloyan.info"
-            },
-            {
-                "name": "Matthew J. Mucklo",
-                "email": "mmucklo@corp.oodle.com"
-            },
-            {
-                "name": "Stefan Thomas",
-                "email": "moon@justmoon.de"
-            }
-        ],
-        "description": "KRUMO - version 2.0 of print_r(); and var_dump(); (with new updates)",
-        "keywords": [
-            "debug",
-            "debugging",
-            "krumo",
-            "pretty",
-            "print",
-            "print_r",
-            "var_dump"
         ]
     },
     {
@@ -4901,59 +4697,6 @@
         ]
     },
     {
-        "name": "ycms/modules",
-        "version": "v2.1.1",
-        "version_normalized": "2.1.1.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/ycms/modules.git",
-            "reference": "c51c658bc18898348a197cfac79747b55c7a399e"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/ycms/modules/zipball/c51c658bc18898348a197cfac79747b55c7a399e",
-            "reference": "c51c658bc18898348a197cfac79747b55c7a399e",
-            "shasum": ""
-        },
-        "require": {
-            "laravel/framework": "5.1.*",
-            "laravelcollective/html": "~5.0",
-            "php": ">=5.4.0",
-            "pingpong/generators": "2.1.*",
-            "pingpong/support": "2.1.*"
-        },
-        "require-dev": {
-            "mockery/mockery": "~0.9",
-            "phpunit/phpunit": "~4"
-        },
-        "time": "2015-07-04 11:21:44",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Pingpong\\Modules\\": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Pingpong Labs",
-                "email": "pingpong.labs@gmail.com"
-            }
-        ],
-        "description": "Laravel Modules",
-        "keywords": [
-            "hmvc",
-            "laravel",
-            "module",
-            "modules",
-            "pingpong"
-        ]
-    },
-    {
         "name": "laracasts/generators",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
@@ -4997,6 +4740,145 @@
         "keywords": [
             "generators",
             "laravel"
+        ]
+    },
+    {
+        "name": "ycms/modules",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ycms/modules.git",
+            "reference": "e60bb180b3b03c3a5e4323ac66dc6c32621c4755"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ycms/modules/zipball/e60bb180b3b03c3a5e4323ac66dc6c32621c4755",
+            "reference": "e60bb180b3b03c3a5e4323ac66dc6c32621c4755",
+            "shasum": ""
+        },
+        "require": {
+            "laravel/framework": "5.1.*",
+            "laravelcollective/html": "~5.0",
+            "php": ">=5.4.0",
+            "pingpong/generators": "2.1.*",
+            "pingpong/support": "2.1.*"
+        },
+        "require-dev": {
+            "mockery/mockery": "~0.9",
+            "phpunit/phpunit": "~4"
+        },
+        "time": "2015-07-06 01:14:34",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Pingpong\\Modules\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Pingpong Labs",
+                "email": "pingpong.labs@gmail.com"
+            }
+        ],
+        "description": "Laravel Modules",
+        "keywords": [
+            "hmvc",
+            "laravel",
+            "module",
+            "modules",
+            "pingpong"
+        ]
+    },
+    {
+        "name": "ycms/krumo",
+        "version": "v0.5.0",
+        "version_normalized": "0.5.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ycms/krumo.git",
+            "reference": "48239769290e267fd7d6ddd1c37e08f96b87221e"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ycms/krumo/zipball/48239769290e267fd7d6ddd1c37e08f96b87221e",
+            "reference": "48239769290e267fd7d6ddd1c37e08f96b87221e",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.2.17"
+        },
+        "time": "2014-02-26 21:10:16",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "class.krumo.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL"
+        ],
+        "authors": [
+            {
+                "name": "Kaloyan K. Tsvetkov",
+                "email": "kaloyan@kaloyan.info"
+            },
+            {
+                "name": "Matthew J. Mucklo",
+                "email": "mmucklo@corp.oodle.com"
+            },
+            {
+                "name": "Stefan Thomas",
+                "email": "moon@justmoon.de"
+            }
+        ],
+        "description": "KRUMO - version 2.0 of print_r(); and var_dump(); (with new updates)",
+        "keywords": [
+            "debug",
+            "debugging",
+            "krumo",
+            "pretty",
+            "print",
+            "print_r",
+            "var_dump"
+        ]
+    },
+    {
+        "name": "ycms/tpl",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ycms/tpl.git",
+            "reference": "8e5a747960917db64be40e2fdb95c103ae873c54"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ycms/tpl/zipball/8e5a747960917db64be40e2fdb95c103ae873c54",
+            "reference": "8e5a747960917db64be40e2fdb95c103ae873c54",
+            "shasum": ""
+        },
+        "time": "2015-07-05 17:45:38",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "App\\Tpl\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "authors": [
+            {
+                "name": "YCMS Labs",
+                "email": "ycms.net@gmail.com"
+            }
         ]
     }
 ]

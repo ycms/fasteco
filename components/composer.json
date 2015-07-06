@@ -1,0 +1,8 @@
+{
+    "require": {
+        "ycms/krumo": "dev-master",
+        "ycms/modules": "dev-master",
+        "ycms/tpl": "dev-master"
+    },
+"minimum-stability": "dev"
+}

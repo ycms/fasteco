@@ -18,6 +18,6 @@ return array(
     $vendorDir . '/laravelcollective/html/src/helpers.php',
     $vendorDir . '/barryvdh/laravel-debugbar/src/helpers.php',
     $vendorDir . '/zhuzhichao/ip-location-zh/src/IpLocationZh.php',
-    $vendorDir . '/oodle/krumo/class.krumo.php',
     $vendorDir . '/illuminate/html/helpers.php',
+    $vendorDir . '/ycms/krumo/class.krumo.php',
 );

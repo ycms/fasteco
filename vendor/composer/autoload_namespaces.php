@@ -15,7 +15,6 @@ return array(
     'Parsedown' => array($vendorDir . '/erusev/parsedown'),
     'Mockery' => array($vendorDir . '/mockery/mockery/library'),
     'Jenssegers\\Mongodb\\Session' => array($vendorDir . '/jenssegers/mongodb-session/src'),
-    'Jenssegers\\Mongodb\\Sentry' => array($vendorDir . '/jenssegers/mongodb-sentry/src'),
     'Jenssegers\\Mongodb' => array($vendorDir . '/jenssegers/mongodb/src'),
     'Jenssegers\\Eloquent' => array($vendorDir . '/jenssegers/mongodb/src'),
     'JakubOnderka\\PhpConsoleHighlighter' => array($vendorDir . '/jakub-onderka/php-console-highlighter/src'),
@@ -33,6 +32,5 @@ return array(
     'Diff' => array($vendorDir . '/phpspec/php-diff/lib'),
     'DebugBar' => array($vendorDir . '/maximebf/debugbar/src'),
     'Cron' => array($vendorDir . '/mtdowling/cron-expression/src'),
-    'Cartalyst\\Sentry' => array($vendorDir . '/cartalyst/sentry/src'),
     'Carbon' => array($vendorDir . '/nesbot/carbon/src'),
 );
