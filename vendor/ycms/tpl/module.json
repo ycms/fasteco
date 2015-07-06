@@ -1,0 +1,15 @@
+{
+    "name": "Tpl",
+    "alias": "tpl",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "YC\\Tpl\\Providers\\TplServiceProvider"
+    ],
+    "aliases":{},
+    "files": [
+        "start.php"
+    ]
+}
