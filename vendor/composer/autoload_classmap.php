@@ -523,6 +523,6 @@ return array(
     'SessionHandlerInterface' => $vendorDir . '/symfony/http-foundation/Resources/stubs/SessionHandlerInterface.php',
     'TestCase' => $baseDir . '/source/tests/TestCase.php',
     'Text_Template' => $vendorDir . '/phpunit/php-text-template/src/Template.php',
-    'YCMS\\Facades\\Y' => $baseDir . '/source/app/Facades/Y.php',
+    'YCMS\\Facades\\YCMS' => $baseDir . '/source/app/Facades/YCMS.php',
     'Zizaco\\Entrust\\MigrationCommand' => $vendorDir . '/zizaco/entrust/src/commands/MigrationCommand.php',
 );
