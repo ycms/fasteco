@@ -8,6 +8,8 @@ $baseDir = dirname($vendorDir);
 return array(
     'Zizaco\\Entrust\\' => array($vendorDir . '/zizaco/entrust/src/Entrust'),
     'Zhuzhichao\\IpLocationZh\\' => array($vendorDir . '/zhuzhichao/ip-location-zh/src'),
+    'YC\\Tpl\\' => array($vendorDir . '/ycms/tpl'),
+    'YC\\Main\\' => array($vendorDir . '/ycms/module-main'),
     'YC\\' => array($baseDir . '/app'),
     'YCMS\\Modules\\' => array($vendorDir . '/ycms/modules'),
     'YCMS\\' => array($baseDir . '/source/app'),
@@ -45,7 +47,5 @@ return array(
     'ClassPreloader\\' => array($vendorDir . '/classpreloader/classpreloader/src'),
     'Barryvdh\\LaravelIdeHelper\\' => array($vendorDir . '/barryvdh/laravel-ide-helper/src'),
     'Barryvdh\\Debugbar\\' => array($vendorDir . '/barryvdh/laravel-debugbar/src'),
-    'App\\Tpl\\' => array($vendorDir . '/ycms/tpl'),
-    'App\\Main\\' => array($vendorDir . '/ycms/module-main'),
     'App\\' => array($baseDir . '/source/modules'),
 );

@@ -4798,68 +4798,6 @@
         ]
     },
     {
-        "name": "ycms/tpl",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/ycms/tpl.git",
-            "reference": "8e5a747960917db64be40e2fdb95c103ae873c54"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/ycms/tpl/zipball/8e5a747960917db64be40e2fdb95c103ae873c54",
-            "reference": "8e5a747960917db64be40e2fdb95c103ae873c54",
-            "shasum": ""
-        },
-        "time": "2015-07-05 17:45:38",
-        "type": "library",
-        "installation-source": "source",
-        "autoload": {
-            "psr-4": {
-                "App\\Tpl\\": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "authors": [
-            {
-                "name": "YCMS Labs",
-                "email": "ycms.net@gmail.com"
-            }
-        ]
-    },
-    {
-        "name": "ycms/module-main",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/ycms/module-main.git",
-            "reference": "900f0cb5d11e027fd693cc3f1c30f0e734e99a7b"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/ycms/module-main/zipball/900f0cb5d11e027fd693cc3f1c30f0e734e99a7b",
-            "reference": "900f0cb5d11e027fd693cc3f1c30f0e734e99a7b",
-            "shasum": ""
-        },
-        "time": "2015-07-06 03:50:27",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "App\\Main\\": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "authors": [
-            {
-                "name": "YCMS Labs",
-                "email": "ycms.net@gmail.com"
-            }
-        ]
-    },
-    {
         "name": "ycms/modules",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
@@ -4910,6 +4848,68 @@
             "module",
             "modules",
             "pingpong"
+        ]
+    },
+    {
+        "name": "ycms/tpl",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ycms/tpl.git",
+            "reference": "b059a2b03adb03504b6496fd7aa7117a18e433c2"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ycms/tpl/zipball/b059a2b03adb03504b6496fd7aa7117a18e433c2",
+            "reference": "b059a2b03adb03504b6496fd7aa7117a18e433c2",
+            "shasum": ""
+        },
+        "time": "2015-07-06 04:27:03",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "YC\\Tpl\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "authors": [
+            {
+                "name": "YCMS Labs",
+                "email": "ycms.net@gmail.com"
+            }
+        ]
+    },
+    {
+        "name": "ycms/module-main",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ycms/module-main.git",
+            "reference": "748a3583e3205b81ae94a5316ba529f97510dc28"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ycms/module-main/zipball/748a3583e3205b81ae94a5316ba529f97510dc28",
+            "reference": "748a3583e3205b81ae94a5316ba529f97510dc28",
+            "shasum": ""
+        },
+        "time": "2015-07-06 04:22:52",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "YC\\Main\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "authors": [
+            {
+                "name": "YCMS Labs",
+                "email": "ycms.net@gmail.com"
+            }
         ]
     }
 ]
