@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    $vendorDir . '/ycms/helpers/helpers.php',
     $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest.php',
     $vendorDir . '/symfony/var-dumper/Resources/functions/dump.php',
     $vendorDir . '/nikic/php-parser/lib/bootstrap.php',
@@ -20,5 +21,4 @@ return array(
     $vendorDir . '/zhuzhichao/ip-location-zh/src/IpLocationZh.php',
     $vendorDir . '/illuminate/html/helpers.php',
     $vendorDir . '/ycms/krumo/class.krumo.php',
-    $vendorDir . '/ycms/helpers/helpers.php',
 );

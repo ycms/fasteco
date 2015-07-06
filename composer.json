@@ -10,6 +10,8 @@
   "type": "project",
   "require": {
     "php": ">=5.5.9",
+    "ycms/helpers": "*@dev",
+
     "laravel/framework": "5.1.*",
     "zizaco/entrust": "dev-laravel-5",
     "zhuzhichao/ip-location-zh": "~1.2",
@@ -26,8 +28,7 @@
     "ycms/modules": "dev-master",
     "ycms/krumo": "^0.5.0",
     "ycms/tpl": "*@dev",
-    "ycms/module-main": "*@dev",
-    "ycms/helpers": "*@dev"
+    "ycms/module-main": "*@dev"
   },
   "require-dev": {
     "fzaninotto/faker": "~1.4",
