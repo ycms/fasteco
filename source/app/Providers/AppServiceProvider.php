@@ -22,19 +22,6 @@ class AppServiceProvider extends ServiceProvider
         //
         DouyasiBlade::register();
         BladeExtend::register();
-
-        if(class_exists('\Corcel\Database')){
-            \Corcel\Database::connect([
-                'host'     => getenv('DB_HOST'),
-                'database' => getenv('DB_NAME'),
-                'username' => getenv('DB_USER'),
-                'password' => getenv('DB_PASSWORD'),
-                'prefix'   => 'wp_',
-            ]);
-        }
-
-
-
     }
 
     /**
@@ -44,6 +31,17 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
+
+
+        if (class_exists('\Corcel\Database')) {
+            \Corcel\Database::connect([
+                'host'     => getenv('DB_HOST'),
+                'database' => getenv('DB_DATABASE'),
+                'username' => getenv('DB_USERNAME'),
+                'password' => getenv('DB_PASSWORD'),
+                'prefix'   => 'wp_',
+            ]);
+        }
 
         View::share('errors', new MessageBag([]));
        //

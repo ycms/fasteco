@@ -311,6 +311,6 @@ HTML;
     protected static function compile_define($value)
     {
 
-        return preg_replace('/\@(define)?(.+)/', '<?php ${2}; ?>', $value);
+        return preg_replace('/\@define(.+)/', '<?php ${2}; ?>', $value);
     }
 }

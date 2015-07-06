@@ -4,6 +4,8 @@ if(!defined('WP_ONLY')){
     require_once dirname(__DIR__) . '/index.php';
 }
 
+
+
 define('WP_ALLOW_MULTISITE', true);
 
 define('WP_RELOCATE',true);
@@ -46,19 +48,19 @@ define('COOKIEPATH',  '/');
 
 // ** MySQL 设置 - 具体信息来自您正在使用的主机 ** //
 /** WordPress数据库的名称 */
-define('DB_NAME', 'ycms');
+define('DB_NAME', env('DB_DATABASE','ycms'));
 
 /** MySQL数据库用户名 */
-define('DB_USER', 'root');
+define('DB_USER', env('DB_USERNAME','root'));
 
 /** MySQL数据库密码 */
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', env('DB_PASSWORD',''));
 
 /** MySQL主机 */
-define('DB_HOST', 'localhost');
+define('DB_HOST', env('DB_HOST','localhost'));
 
 /** 创建数据表时默认的文字编码 */
-define('DB_CHARSET', 'utf8mb4');
+define('DB_CHARSET', 'utf8');
 
 /** 数据库整理类型。如不确定请勿更改 */
 define('DB_COLLATE', '');

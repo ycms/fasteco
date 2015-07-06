@@ -77,6 +77,6 @@ if ( defined('WP_USE_THEMES') && WP_USE_THEMES ) :
 	 * @param string $template The path of the template to include.
 	 */
 	if ( $template = apply_filters( 'template_include', $template ) )
-		include( $template );
+        load_template( $template , false);
 	return;
 endif;
