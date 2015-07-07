@@ -7,7 +7,7 @@
 
     RewriteBase /
 
-    RewriteRule ^.*/*\. - [F,L]
+    #RewriteRule ^.*/*\. - [F,L]
 
     RewriteRule ^/*(source|artisan|vendor|composer.*)/* - [F,L]
 
