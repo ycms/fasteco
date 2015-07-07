@@ -1,0 +1,15 @@
+{
+    "name": "Cutlass",
+    "alias": "cutlass",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "YC\\Cutlass\\Providers\\CutlassServiceProvider"
+    ],
+    "aliases":{},
+    "files": [
+        "start.php"
+    ]
+}

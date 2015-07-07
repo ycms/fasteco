@@ -2722,7 +2722,7 @@
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/ycms/modules/zipball/c52707eb1d597e28750d11fc76f8fc1f60205f90",
+            "url": "https://api.github.com/repos/ycms/modules/zipball/e37640dd0ced290afe62b1e34c47747c927d4c9d",
             "reference": "c52707eb1d597e28750d11fc76f8fc1f60205f90",
             "shasum": ""
         },
@@ -5055,6 +5055,37 @@
         "autoload": {
             "psr-4": {
                 "YC\\Base\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "authors": [
+            {
+                "name": "YCMS Labs",
+                "email": "ycms.net@gmail.com"
+            }
+        ]
+    },
+    {
+        "name": "ycms/theme-cutlass",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ycms/theme-cutlass.git",
+            "reference": "2b988517e75d1669789f03466e8ed51f1ee4d032"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ycms/theme-cutlass/zipball/2b988517e75d1669789f03466e8ed51f1ee4d032",
+            "reference": "2b988517e75d1669789f03466e8ed51f1ee4d032",
+            "shasum": ""
+        },
+        "time": "2015-07-07 20:12:13",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "YC\\Cutlass\\": ""
             }
         },
         "notification-url": "https://packagist.org/downloads/",

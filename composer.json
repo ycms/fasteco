@@ -29,7 +29,8 @@
     "ycms/module-main": "*@dev",
     "jgrossi/corcel": "*@dev",
     "guzzlehttp/guzzle": "^6.0",
-    "ycms/theme-base": "*@dev"
+    "ycms/theme-base": "*@dev",
+    "ycms/theme-cutlass": "*@dev"
   },
   "require-dev": {
     "fzaninotto/faker": "~1.4",
