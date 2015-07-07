@@ -10735,7 +10735,7 @@ audio, video {
     clear: both;
     position: fixed;
     top: 9%;
-    left: 190px;
+    left: 240px;
     right: 30px;
     bottom: 3%;
     background: #fff;
@@ -13758,8 +13758,8 @@ body.locale-he-il, body.locale-he-il .press-this a.wp-switch-editor {
 
 #wpadminbar,
 #wpadminbar .quicklinks .ab-empty-item, #wpadminbar .quicklinks a, #wpadminbar .shortlink-input {
-    height: 50px;
-    line-height: 50px;
+    height: 49px;
+    line-height: 49px;
 }
 
 @media screen and (min-width: 782px){
@@ -13769,7 +13769,8 @@ body.locale-he-il, body.locale-he-il .press-this a.wp-switch-editor {
 }
 
 
-#wpadminbar {position: relative;margin-left:-20px;width: auto;}
+#wpadminbar {position: relative;margin-left:-20px;width: auto;
+    }
 
 html.wp-toolbar {padding-top:0;}
 

@@ -121,11 +121,12 @@ class Repository implements RepositoryInterface, Countable
             is_array($manifests) || $manifests = [];
 
             foreach ($manifests as $manifest) {
-                $name = Json::make($manifest)->get('name');
+                $data = Json::make($manifest);
+                $name = $data->get('name');
 
                 $lowerName = strtolower($name);
 
-                $modules[$name] = new Module($this->app, $lowerName, dirname($manifest));
+                $modules[$name] = new Module($this->app, $lowerName, dirname($manifest),$data);
             }
         }
 
@@ -313,13 +314,15 @@ class Repository implements RepositoryInterface, Countable
      */
     public function find($name)
     {
+        /** @type Module $module */
         foreach ($this->all() as $module) {
-            if ($module->getLowerName() == strtolower($name)) {
+            //foolant
+            if ($module->getLowerName() == strtolower($name) || strtolower(basename($module->getPath())) == strtolower($name) ) {
                 return $module;
             }
         }
 
-        return;
+        return false;
     }
 
     /**

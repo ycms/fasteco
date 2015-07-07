@@ -205,7 +205,9 @@ final class WP_Theme implements ArrayAccess {
 
 		$cache = $this->cache_get( 'theme' );
 
+
 		if ( is_array( $cache ) ) {
+
 			foreach ( array( 'errors', 'headers', 'template' ) as $key ) {
 				if ( isset( $cache[ $key ] ) )
 					$this->$key = $cache[ $key ];
@@ -215,6 +217,7 @@ final class WP_Theme implements ArrayAccess {
 			if ( isset( $cache['theme_root_template'] ) )
 				$theme_root_template = $cache['theme_root_template'];
 		} elseif ( ! file_exists( $this->theme_root . '/' . $theme_file ) ) {
+
 			$this->headers['Name'] = $this->stylesheet;
 			if ( ! file_exists( $this->theme_root . '/' . $this->stylesheet ) )
 				$this->errors = new WP_Error( 'theme_not_found', sprintf( __( 'The theme directory "%s" does not exist.' ), $this->stylesheet ) );
@@ -226,7 +229,8 @@ final class WP_Theme implements ArrayAccess {
 				$this->errors->add( 'theme_root_missing', __( 'ERROR: The themes directory is either empty or doesn&#8217;t exist. Please check your installation.' ) );
 			return;
 		} elseif ( ! is_readable( $this->theme_root . '/' . $theme_file ) ) {
-			$this->headers['Name'] = $this->stylesheet;
+
+            $this->headers['Name'] = $this->stylesheet;
 			$this->errors = new WP_Error( 'theme_stylesheet_not_readable', __( 'Stylesheet is not readable.' ) );
 			$this->template = $this->stylesheet;
 			$this->cache_add( 'theme', array( 'headers' => $this->headers, 'errors' => $this->errors, 'stylesheet' => $this->stylesheet, 'template' => $this->template ) );
@@ -240,17 +244,16 @@ final class WP_Theme implements ArrayAccess {
 					$this->headers['Name'] .= '/' . $this->stylesheet;
 			}
 		}
-
 		// (If template is set from cache [and there are no errors], we know it's good.)
 		if ( ! $this->template && ! ( $this->template = $this->headers['Template'] ) ) {
 			$this->template = $this->stylesheet;
-			if ( ! file_exists( $this->theme_root . '/' . $this->stylesheet . '/index.php' ) ) {
-				$this->errors = new WP_Error( 'theme_no_index', __( 'Template is missing.' ) );
+            //foolant
+			if ( ! file_exists( $this->theme_root . '/' . $this->stylesheet . '/index.php' ) && !file_exists($this->theme_root . '/' . $this->stylesheet . '/index.blade.php')) {
+                $this->errors = new WP_Error( 'theme_no_index', __( 'Template is missing.' ) );
 				$this->cache_add( 'theme', array( 'headers' => $this->headers, 'errors' => $this->errors, 'stylesheet' => $this->stylesheet, 'template' => $this->template ) );
 				return;
 			}
 		}
-
 		// If we got our data from cache, we can assume that 'template' is pointing to the right place.
 		if ( ! is_array( $cache ) && $this->template != $this->stylesheet && ! file_exists( $this->theme_root . '/' . $this->template . '/index.php' ) ) {
 			// If we're in a directory of themes inside /themes, look for the parent nearby.
@@ -263,6 +266,7 @@ final class WP_Theme implements ArrayAccess {
 				// We don't look into directories of themes, just the theme root.
 				$theme_root_template = $directories[ $this->template ]['theme_root'];
 			} else {
+
 				// Parent theme is missing.
 				$this->errors = new WP_Error( 'theme_no_parent', sprintf( __( 'The parent theme is missing. Please install the "%s" parent theme.' ), $this->template ) );
 				$this->cache_add( 'theme', array( 'headers' => $this->headers, 'errors' => $this->errors, 'stylesheet' => $this->stylesheet, 'template' => $this->template ) );
@@ -271,7 +275,7 @@ final class WP_Theme implements ArrayAccess {
 			}
 		}
 
-		// Set the parent, if we're a child theme.
+        // Set the parent, if we're a child theme.
 		if ( $this->template != $this->stylesheet ) {
 			// If we are a parent, then there is a problem. Only two generations allowed! Cancel things out.
 			if ( $_child instanceof WP_Theme && $_child->template == $this->stylesheet ) {
@@ -285,7 +289,8 @@ final class WP_Theme implements ArrayAccess {
 				}
 				return;
 			}
-			// Set the parent. Pass the current instance so we can do the crazy checks above and assess errors.
+
+            // Set the parent. Pass the current instance so we can do the crazy checks above and assess errors.
 			$this->parent = new WP_Theme( $this->template, isset( $theme_root_template ) ? $theme_root_template : $this->theme_root, $this );
 		}
 
@@ -814,6 +819,7 @@ final class WP_Theme implements ArrayAccess {
 	 * @return string URL to the stylesheet directory.
 	 */
 	public function get_stylesheet_directory_uri() {
+        kd(Module::get($this->stylesheet));
 		return $this->get_theme_root_uri() . '/' . str_replace( '%2F', '/', rawurlencode( $this->stylesheet ) );
 	}
 

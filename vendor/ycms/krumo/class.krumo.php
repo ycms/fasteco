@@ -6,7 +6,7 @@
 * about any PHP variable. It is a nice replacement for print_r() or var_dump()
 * which are used by a lot of PHP developers.
 *
-* @original author Kaloyan K. Tsvetkov <kaloyan@kaloyan.info>
+* @original author Kaloyan K. krumo-call <kaloyan@kaloyan.info>
 * @license http://opensource.org/licenses/lgpl-license.php GNU Lesser General Public License Version 2.1
 *
 * https://github.com/oodle/krumo
@@ -513,8 +513,10 @@ class Krumo {
 
             if ($showCallInfo && isset($d['file']) && $d['file']) {
                 print "<span class=\"krumo-call\" style=\"white-space:nowrap;\">";
-                print "Called from <strong><code>" . $d['file'] . "</code></strong>, ";
+                print "Called from <strong><code>" . (function_exists('base_path') ? substr($d['file'],strlen(dirname(base_path()))) : $d['file'] ). "</code></strong>, ";
                 print "line <strong><code>" . $d['line'] . "</code></strong></span>";
+                print "&nbsp;&nbsp;time: <strong><code>" . number_format(microtime(true)-LARAVEL_START,3) . "s </code></strong></span>";
+
             }
 
             if ($showVersion) {
@@ -1400,7 +1402,8 @@ class Krumo {
 
         // Get the truncate length from the config, or default to 100
         $truncate_length = Krumo::_config('display', 'truncate_length', 100);
-        $display_cr      = Krumo::_config('display', 'carriage_returns', true);
+        //foolant
+        $display_cr      = Krumo::_config('display', 'carriage_returns', false);
 
         if (strLen($data) > $truncate_length ) {
             $_ = substr($data, 0, $truncate_length - 1);
@@ -1408,6 +1411,10 @@ class Krumo {
         }
 
         $_ = htmlentities($_);
+
+        if(function_exists('base_path')){
+            $_ = str_replace(dirname(base_path()),'~',$_);
+        }
 
         if ($display_cr) {
             $_ = preg_replace("/\\n/","<strong class=\"krumo-carrage-return\"> &para; </strong>",$_);

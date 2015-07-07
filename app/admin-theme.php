@@ -432,12 +432,14 @@ function wp_prepare_themes_for_js( $themes = null ) {
 
 	if ( null === $themes ) {
 		$themes = wp_get_themes( array( 'allowed' => true ) );
+
+
 		if ( ! isset( $themes[ $current_theme ] ) ) {
 			$themes[ $current_theme ] = wp_get_theme();
 		}
 	}
 
-	$updates = array();
+    $updates = array();
 	if ( current_user_can( 'update_themes' ) ) {
 		$updates_transient = get_site_transient( 'update_themes' );
 		if ( isset( $updates_transient->response ) ) {
@@ -449,7 +451,8 @@ function wp_prepare_themes_for_js( $themes = null ) {
 
 	$parents = array();
 
-	foreach ( $themes as $theme ) {
+    /** @type WP_Theme $theme */
+    foreach ( $themes as $theme ) {
 		$slug = $theme->get_stylesheet();
 		$encoded_slug = urlencode( $slug );
 

@@ -16,6 +16,7 @@ if ( ! is_multisite() )
 if ( !current_user_can('manage_network_themes') )
 	wp_die( __( 'You do not have sufficient permissions to manage network themes.' ) );
 
+/** @type WP_MS_Themes_List_Table $wp_list_table */
 $wp_list_table = _get_list_table('WP_MS_Themes_List_Table');
 $pagenum = $wp_list_table->get_pagenum();
 
@@ -230,7 +231,9 @@ if ( $action ) {
 	}
 }
 
+
 $wp_list_table->prepare_items();
+
 
 add_thickbox();
 

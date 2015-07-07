@@ -7,6 +7,8 @@
  * @author   Taylor Otwell <taylorotwell@gmail.com>
  */
 
+define('ROOT_PATH', __DIR__ . DIRECTORY_SEPARATOR);
+
 /*
 |--------------------------------------------------------------------------
 | Register The Auto Loader
@@ -19,7 +21,7 @@
 |
 */
 
-require __DIR__.'/source/bootstrap/autoload.php';
+require __DIR__ . '/source/bootstrap/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -33,7 +35,7 @@ require __DIR__.'/source/bootstrap/autoload.php';
 |
 */
 
-$app = require_once __DIR__.'/source/bootstrap/app.php';
+$app = require_once __DIR__ . '/source/bootstrap/app.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -54,7 +56,7 @@ $response = $kernel->handle(
     $request = Illuminate\Http\Request::capture()
 );
 
-if(!defined('WP_ONLY') or WP_ONLY == 0){
+if (!defined('WP_ONLY') or WP_ONLY == 0) {
     $response->send();
     $kernel->terminate($request, $response);
 }

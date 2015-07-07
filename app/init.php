@@ -16,7 +16,7 @@ register_theme_directory(__DIR__);
 
 foreach(Module::all() as $name => $module){
     if(Module::find($name)->json()->type == 'theme'){
-        register_theme_directory($module->getpath());
+        register_theme_directory(dirname($module->getpath()));
         //kd($module->getpath());
     }
 }
@@ -27,8 +27,9 @@ foreach(Module::all() as $name => $module){
 //    return __DIR__;
 //});
 
-add_filter('theme_root_uri',function(){
-    return content_url();
-});
+//add_filter('theme_root_uri',function($theme_root_uri = '', $siteurl = '', $stylesheet_or_template = ''){
+//    kd($theme_root_uri, $siteurl, $stylesheet_or_template);
+//    return content_url();
+//});
 
 show_admin_bar(false);

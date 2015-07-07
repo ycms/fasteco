@@ -34,11 +34,13 @@ function wp_get_themes( $args = array() ) {
 
 	$theme_directories = search_theme_directories();
 
+
+
 	if ( count( $wp_theme_directories ) > 1 ) {
 		// Make sure the current theme wins out, in case search_theme_directories() picks the wrong
 		// one in the case of a conflict. (Normally, last registered theme root wins.)
 		$current_theme = get_stylesheet();
-		if ( isset( $theme_directories[ $current_theme ] ) ) {
+        if ( isset( $theme_directories[ $current_theme ] ) ) {
 			$root_of_current_theme = get_raw_theme_root( $current_theme );
 			if ( ! in_array( $root_of_current_theme, $wp_theme_directories ) )
 				$root_of_current_theme = WP_CONTENT_DIR . $root_of_current_theme;
@@ -61,6 +63,8 @@ function wp_get_themes( $args = array() ) {
 			$theme_directories = array_diff_key( $theme_directories, WP_Theme::get_allowed( $args['blog_id'] ) );
 	}
 
+
+
 	$themes = array();
 	static $_themes = array();
 
@@ -77,6 +81,7 @@ function wp_get_themes( $args = array() ) {
 				unset( $themes[ $theme ] );
 		}
 	}
+
 
 	return $themes;
 }
@@ -330,6 +335,9 @@ function get_template_directory() {
 function get_template_directory_uri() {
 	$template = str_replace( '%2F', '/', rawurlencode( get_template() ) );
 	$theme_root_uri = get_theme_root_uri( $template );
+    if ($module = Module::get($template)) {
+        $template = $module->getName();
+    }
 	$template_dir_uri = "$theme_root_uri/$template";
 
 	/**
@@ -419,6 +427,7 @@ function search_theme_directories( $force = false ) {
 	$wp_theme_directories = (array) $wp_theme_directories;
 	$relative_theme_roots = array();
 
+
 	// Set up maybe-relative, maybe-absolute array of theme directories.
 	// We always want to return absolute, but we need to cache relative
 	// to use in get_theme_root().
@@ -429,7 +438,7 @@ function search_theme_directories( $force = false ) {
 			$relative_theme_roots[ $theme_root ] = $theme_root;
 	}
 
-	/**
+    /**
 	 * Filter whether to get the cache of the registered theme directories.
 	 *
 	 * @since 3.4.0
@@ -461,13 +470,15 @@ function search_theme_directories( $force = false ) {
 	/* Loop the registered theme directories and extract all themes */
 	foreach ( $wp_theme_directories as $theme_root ) {
 
-		// Start with directories in the root of the current theme directory.
+
+
+        // Start with directories in the root of the current theme directory.
 		$dirs = @ scandir( $theme_root );
 		if ( ! $dirs ) {
 			trigger_error( "$theme_root is not readable", E_USER_NOTICE );
 			continue;
 		}
-        kd($dirs);
+
 
 		foreach ( $dirs as $dir ) {
 			if ( ! is_dir( $theme_root . '/' . $dir ) || $dir[0] == '.' || $dir == 'CVS' )
@@ -528,8 +539,6 @@ function search_theme_directories( $force = false ) {
 	if ( $theme_roots != get_site_transient( 'theme_roots' ) )
 		set_site_transient( 'theme_roots', $theme_roots, $cache_expiration );
 
-    kd($found_themes);
-
 	return $found_themes;
 }
 
@@ -586,13 +595,19 @@ function get_theme_root_uri( $stylesheet_or_template = false, $theme_root = fals
 	if ( $stylesheet_or_template && ! $theme_root )
 		$theme_root = get_raw_theme_root( $stylesheet_or_template );
 
+    //k($stylesheet_or_template , $theme_root);
+
+
+
 	if ( $stylesheet_or_template && $theme_root ) {
+
 		if ( in_array( $theme_root, (array) $wp_theme_directories ) ) {
+            //k($theme_root);
 			// Absolute path. Make an educated guess. YMMV -- but note the filter below.
 			if ( 0 === strpos( $theme_root, WP_CONTENT_DIR ) )
 				$theme_root_uri = content_url( str_replace( WP_CONTENT_DIR, '', $theme_root ) );
-			elseif ( 0 === strpos( $theme_root, ABSPATH ) )
-				$theme_root_uri = site_url( str_replace( ABSPATH, '', $theme_root ) );
+			elseif ( 0 === strpos( $theme_root, ROOT_PATH ) )
+				$theme_root_uri = home_url( '/static');
 			elseif ( 0 === strpos( $theme_root, WP_PLUGIN_DIR ) || 0 === strpos( $theme_root, WPMU_PLUGIN_DIR ) )
 				$theme_root_uri = plugins_url( basename( $theme_root ), $theme_root );
 			else
@@ -601,8 +616,11 @@ function get_theme_root_uri( $stylesheet_or_template = false, $theme_root = fals
 			$theme_root_uri = content_url( $theme_root );
 		}
 	} else {
-		$theme_root_uri = content_url( 'themes' );
+		$theme_root_uri = content_url( );
+        //'themes'
 	}
+
+    //k($theme_root_uri);
 
 	/**
 	 * Filter the URI for themes directory.
@@ -872,22 +890,22 @@ function validate_current_theme() {
 	if ( defined('WP_INSTALLING') || ! apply_filters( 'validate_current_theme', true ) )
 		return true;
 
-	if ( get_template() != WP_DEFAULT_THEME && !file_exists(get_template_directory() . '/index.php') ) {
+	if ( get_template() != WP_DEFAULT_THEME && !file_exists(get_template_directory() . '/index.php') && !file_exists(get_template_directory() . '/index.blade.php') ) {
 		switch_theme( WP_DEFAULT_THEME );
 		return false;
 	}
+
 
 	if ( get_stylesheet() != WP_DEFAULT_THEME && !file_exists(get_template_directory() . '/style.css') ) {
 		switch_theme( WP_DEFAULT_THEME );
 		return false;
 	}
 
-	if ( is_child_theme() && ! file_exists( get_stylesheet_directory() . '/style.css' ) ) {
+    if ( is_child_theme() && ! file_exists( get_stylesheet_directory() . '/style.css' ) ) {
 		switch_theme( WP_DEFAULT_THEME );
 		return false;
 	}
-
-	return true;
+    return true;
 }
 
 /**

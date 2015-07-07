@@ -78,6 +78,7 @@ class WP_MS_Themes_List_Table extends WP_List_Table {
 			'broken' => $this->is_site_themes ? array() : wp_get_themes( array( 'errors' => true ) ),
 		);
 
+
 		if ( $this->is_site_themes ) {
 			$themes_per_page = $this->get_items_per_page( 'site_themes_network_per_page' );
 			$allowed_where = 'site';
@@ -87,6 +88,7 @@ class WP_MS_Themes_List_Table extends WP_List_Table {
 		}
 
 		$maybe_update = current_user_can( 'update_themes' ) && ! $this->is_site_themes && $current = get_site_transient( 'update_themes' );
+
 
 		foreach ( (array) $themes['all'] as $key => $theme ) {
 			if ( $this->is_site_themes && $theme->is_allowed( 'network' ) ) {
@@ -103,7 +105,8 @@ class WP_MS_Themes_List_Table extends WP_List_Table {
 			$themes[ $filter ][ $key ] = $themes['all'][ $key ];
 		}
 
-		if ( $s ) {
+
+        if ( $s ) {
 			$status = 'search';
 			$themes['search'] = array_filter( array_merge( $themes['all'], $themes['broken'] ), array( $this, '_search_callback' ) );
 		}

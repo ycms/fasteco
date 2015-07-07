@@ -134,7 +134,9 @@ require_once( ABSPATH . 'wp-admin/admin-header.php' );
 	<?php endif; ?>
 	</h2>
 <?php
-if ( ! validate_current_theme() || isset( $_GET['broken'] ) ) : ?>
+//k(!validate_current_theme());
+if ( ! validate_current_theme() || isset( $_GET['broken'] ) ) :
+    ?>
 <div id="message1" class="updated notice is-dismissible"><p><?php _e('The active theme is broken. Reverting to the default theme.'); ?></p></div>
 <?php elseif ( isset($_GET['activated']) ) :
 		if ( isset( $_GET['previewed'] ) ) { ?>

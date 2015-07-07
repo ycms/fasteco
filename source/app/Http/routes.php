@@ -23,6 +23,10 @@ Route::get('/', function () {
 #对后台开启csrf过滤
 Route::when('admin/*', 'csrf', ['post', 'delete', 'put']);
 
+Route::any('cp',function(){
+    return Response::view('cp');
+});
+
 /*
 |--------------------------------------------------------------------------
 | 基础权限 登录注册找回密码等操作
