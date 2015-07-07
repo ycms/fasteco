@@ -13774,7 +13774,7 @@ body.locale-he-il, body.locale-he-il .press-this a.wp-switch-editor {
 
 html.wp-toolbar {padding-top:0;}
 
-#wpadminbar ul li {border-right:1px solid #ddd;}
+#wpadminbar  .quicklinks > ul > li {border-right:1px solid #ddd;}
 
 #wp-admin-bar-wp-logo {display: none;}
 

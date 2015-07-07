@@ -373,7 +373,8 @@ class Repository implements RepositoryInterface, Countable
     public function getModulePath($module)
     {
         try {
-            return $this->findOrFail($module)->getPath().'/';
+            $ret = $this->findOrFail($module);
+            return $ret ? $ret->getPath().'/' : $this->getPath() . '/' . Str::studly($module) . '/';
         } catch (ModuleNotFoundException $e) {
             return $this->getPath().'/'.Str::studly($module).'/';
         }
