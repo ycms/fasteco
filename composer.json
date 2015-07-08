@@ -30,7 +30,8 @@
     "jgrossi/corcel": "*@dev",
     "guzzlehttp/guzzle": "^6.0",
     "ycms/theme-base": "*@dev",
-    "ycms/theme-cutlass": "*@dev"
+    "ycms/theme-cutlass": "*@dev",
+    "ycms/theme-evo": "*@dev"
   },
   "require-dev": {
     "fzaninotto/faker": "~1.4",

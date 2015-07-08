@@ -5076,7 +5076,7 @@
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/ycms/theme-cutlass/zipball/2b988517e75d1669789f03466e8ed51f1ee4d032",
+            "url": "https://api.github.com/repos/ycms/theme-cutlass/zipball/936ca0a1c832217301a15b2db7fd9c99752534de",
             "reference": "2b988517e75d1669789f03466e8ed51f1ee4d032",
             "shasum": ""
         },
@@ -5086,6 +5086,37 @@
         "autoload": {
             "psr-4": {
                 "YC\\Cutlass\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "authors": [
+            {
+                "name": "YCMS Labs",
+                "email": "ycms.net@gmail.com"
+            }
+        ]
+    },
+    {
+        "name": "ycms/theme-evo",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ycms/theme-evo.git",
+            "reference": "a15c2811db45b02a15ba18a9cdb5a084e043276e"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ycms/theme-evo/zipball/a15c2811db45b02a15ba18a9cdb5a084e043276e",
+            "reference": "a15c2811db45b02a15ba18a9cdb5a084e043276e",
+            "shasum": ""
+        },
+        "time": "2015-07-08 09:00:22",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "YC\\Evo\\": ""
             }
         },
         "notification-url": "https://packagist.org/downloads/",
