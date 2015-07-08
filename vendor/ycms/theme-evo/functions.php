@@ -28,7 +28,7 @@ $cutlass_includes = array(
 //}
 
 foreach ($cutlass_includes as $file) {
-  if (!$filepath = locate_template("Entities/$file")) {
+  if (!$filepath = locate_template("Includes/$file")) {
     trigger_error(sprintf(__('Error locating %s for inclusion', 'cutlass'), $file), E_USER_ERROR);
   }
 

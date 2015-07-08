@@ -557,19 +557,13 @@ function load_template($_template_file, $require_once = true)
 
     extract(View::getShared());
 
-
-
-    if ($isBlade = preg_match("/\.blade\.php$/", $_template_file)) {
-        $cachefile = Blade::getCompiledPath($_template_file);
-        if(!file_exists($cachefile) || filemtime($cachefile) < $cachefile){
-            Blade::compile($_template_file);
-        }
-        $_template_file = $cachefile;
+    if ($require_once === null) {
+        return $_template_file;
     }
 
-
-    if ($require_once === null) {
-        return  $_template_file;
+    if ($isBlade = preg_match("/\.blade\.php$/", $_template_file)) {
+        echo View::file($_template_file)->with(get_defined_vars());
+        return '';
     }
 
     if ($require_once) {
