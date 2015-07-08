@@ -7,8 +7,8 @@ class ThemeManager
     public static function register()
     {
 
-        foreach(glob(__DIR__.'/Helpers/*.php') as $file){
-            if(preg_match("/^\w+/",basename($file))){
+        foreach (glob(__DIR__ . '/Helpers/*.php') as $file) {
+            if (preg_match("/^\w+/", basename($file))) {
                 require $file;
             }
         }
@@ -39,7 +39,6 @@ class ThemeManager
         }
 
 
-
         if (function_exists('add_image_size')) {
             add_image_size('60x60', 60, 60, true); // (cropped)
             add_image_size('245x163', 245, 163, true); // (cropped)
@@ -47,25 +46,25 @@ class ThemeManager
 
         }
 
-/*        //自动选择模板的函数
-        //通过 single_template 钩子挂载函数
-        add_filter('single_template', function ($single) {
-            //定义模板文件所在目录为 single 文件夹
-            define('SINGLE_PATH', TEMPLATEPATH . '/single');
-            global $wp_query, $post;
-            //通过分类别名或ID选择模板文件
-            $ext = '.blade.php';
-            foreach ((array)get_the_category() as $cat) :
-                if (file_exists(SINGLE_PATH . '/' . $cat->slug . $ext)) {
-                    return SINGLE_PATH . '/' . $cat->slug . $ext;
-                } elseif (file_exists(SINGLE_PATH . '/' . $cat->term_id . $ext)) {
-                    return SINGLE_PATH . '/' . $cat->term_id . $ext;
-                }
-            endforeach;
+        /*        //自动选择模板的函数
+                //通过 single_template 钩子挂载函数
+                add_filter('single_template', function ($single) {
+                    //定义模板文件所在目录为 single 文件夹
+                    define('SINGLE_PATH', TEMPLATEPATH . '/single');
+                    global $wp_query, $post;
+                    //通过分类别名或ID选择模板文件
+                    $ext = '.blade.php';
+                    foreach ((array)get_the_category() as $cat) :
+                        if (file_exists(SINGLE_PATH . '/' . $cat->slug . $ext)) {
+                            return SINGLE_PATH . '/' . $cat->slug . $ext;
+                        } elseif (file_exists(SINGLE_PATH . '/' . $cat->term_id . $ext)) {
+                            return SINGLE_PATH . '/' . $cat->term_id . $ext;
+                        }
+                    endforeach;
 
-            return $single;
-        });
-*/
+                    return $single;
+                });
+        */
 
         add_action('load-themes.php', function () {
             if ($GLOBALS['pagenow'] != 'themes.php' || !isset($_GET['activated'])) {
@@ -130,8 +129,9 @@ class ThemeManager
             return $content;
         });
 
-
     }
+
+
 }
 
 
@@ -149,13 +149,7 @@ add_action('wp_head', function (){ ?>
 */
 
 
-
-
-
-
-
 //kd(ot_get_option('phone_num') ?: '1800 011 2211');
-
 
 
 // 添加律师资料
@@ -167,8 +161,5 @@ add_action('wp_head', function (){ ?>
 //        return $string;
 //    }
 //}
-
-
-
 
 

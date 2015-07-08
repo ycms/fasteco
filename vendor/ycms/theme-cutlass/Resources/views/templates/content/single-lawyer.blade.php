@@ -10,11 +10,11 @@
         <div class="data-left">
             <div class="data-archives">
                 <div class="archives-img">
-                    <?php if ( has_post_thumbnail() && !post_password_required() && !is_attachment() ) : ?>
+                    @if( has_post_thumbnail() && !post_password_required() && !is_attachment() )
                     <div class="new-entry-thumbnail">
-                        <?php the_post_thumbnail(); ?>
+                        {{ the_post_thumbnail() }}
                     </div>
-                    <?php endif; ?>
+                    @endif
                     <!--<img src="images/lawer-1.png"/>-->
                 </div>
                 <div class="archives-txt">

@@ -146,6 +146,7 @@ class Factory implements FactoryContract
             $view = $this->aliases[$view];
         }
 
+
         $view = $this->normalizeName($view);
 
         $path = $this->finder->find($view);

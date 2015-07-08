@@ -55,9 +55,8 @@
                                     <div class="row">
                                         <ul class="owl-carousel" id="news-slider" data-columns="2" data-autoplay="" data-pagination="yes" data-arrows="yes" data-single-item="no" data-items-desktop="2" data-items-desktop-small="1"
                                                 data-items-tablet="2" data-items-mobile="1">
-                                            <?php for($query = query_category(ot_get_option('info_category', ['news']),
-                                                    3,
-                                                    ['meta_key' => '_thumbnail_id']),$i = 0;$query->have_posts();$i += 1):$query->the_post(); ?>
+                                            @for($query = query_category(ot_get_option('info_category', ['news']), 3, ['meta_key' => '_thumbnail_id']),$i = 0;$query->have_posts();$i += 1)
+                                                @eval($query->the_post())
                                             <li class="item">
                                                 <div class="post-block format-standard">
                                                     <a href="{{the_permalink()}}" class="media-box post-image">{{get_thumb('337x225')}}</a>
@@ -80,7 +79,7 @@
                                                     </div>
                                                 </div>
                                             </li>
-                                            <?php endfor; ?>
+                                            @endfor
 
                                             <!--{demo}-->
                                             <li class="item">

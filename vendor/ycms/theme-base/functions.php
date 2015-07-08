@@ -23,8 +23,8 @@ $cutlass_includes = array(
 
 
 ///if (defined('TEMPLATEPATH')) {
-    View::addLocation(__DIR__.'/Resources/views');
-    View::addNamespace('tpl', __DIR__ . '/Resources/views');
+//    View::addLocation(__DIR__.'/Resources/views');
+//    View::addNamespace('tpl', __DIR__ . '/Resources/views');
 //}
 
 foreach ($cutlass_includes as $file) {

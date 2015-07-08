@@ -16,13 +16,12 @@ class BladeExtend
         'wpend',
         'define',
         'static',
-        'lang',
+        //'lang',
         'eval',
     ];
 
     public static function register()
     {
-
 
         foreach (static::$compiles as $function) {
             if (!method_exists(__CLASS__, $function = 'compile_' . $function)) {
@@ -60,7 +59,7 @@ class BladeExtend
 
     /* @datetime($var) */
     /**
-     * @param $view
+     * @param       $view
      * @param Blade $compiler
      * @return mixed
      */
@@ -92,11 +91,11 @@ class BladeExtend
             }
         }
         return preg_replace_callback("/\[\[\s*(.*?)\s*\]\]/", function ($input) use ($lang) {
-            if (!isset($lang[$input[1]])) {
-                $lang[$input[1]] = $input[1];
+            if (!isset($lang[ $input[1] ])) {
+                $lang[ $input[1] ] = $input[1];
                 file_put_contents(storage_path('lang/lang.local.php'), "<?php return " . var_export($lang, true) . ";");
             }
-            return "<?php echo ".__CLASS__."::get_lang('" . addslashes($input[1]) . "');?>";
+            return "<?php echo " . __CLASS__ . "::get_lang('" . addslashes($input[1]) . "');?>";
         }, $view);
 
     }
@@ -169,7 +168,7 @@ class BladeExtend
         // located on the first line of the template contents.
 
         /** @todo 2015/06/16 下午4:06 去掉前后空行 foolant */
-        $lines = preg_split("/(\r?\n)/", trim($value) );
+        $lines = preg_split("/(\r?\n)/", trim($value));
 
         $pattern = static::matcher('layout');
 
@@ -184,7 +183,7 @@ class BladeExtend
     protected static function compile_static($value)
     {
         $pattern = static::matcher('static');
-        return preg_replace($pattern, '$1<?php echo '.__CLASS__.'::do_static$2; ?>', $value);
+        return preg_replace($pattern, '$1<?php echo ' . __CLASS__ . '::do_static$2; ?>', $value);
     }
 
     public static function do_static($file)

@@ -48,3 +48,14 @@ add_action("user_register", function ($user_id) {
     update_user_meta($user_id, 'show_admin_bar_front', false);
     //update_user_meta( $user_id, 'show_admin_bar_admin', 'false' );
 }, 10, 1);
+
+if(is_dir(get_template_directory().'/Resources/views')){
+    View::addLocation(get_template_directory() . '/Resources/views');
+    View::addNamespace('tpl', get_template_directory() . '/Resources/views');
+}
+
+View::addLocation(get_template_directory() );
+View::addNamespace('default', get_template_directory() );
+
+
+//kd(get_template_directory());

@@ -2,19 +2,14 @@
     return;
 @endif
 
-<?php
-global $postid;
-$postid = get_the_ID();
-$comments = get_comments(array(
-        'post_id' => $postid,
-        'status' => 'approve'
-));
-?>
+@eval(global $postid;$postid = get_the_ID();$comments = get_comments(array( 'post_id' => $postid, 'status' => 'approve'));)
+
 
 
 <section id="comments">
     @if ($comments)
-        <h3><?php printf(_n('One Response to &ldquo;%2$s&rdquo;', '%1$s Responses to &ldquo;%2$s&rdquo;', get_comments_number(), 'cutlass'), number_format_i18n(get_comments_number()), get_the_title()) ?></h3>
+        <h3>
+            {{ printf(_n('One Response to &ldquo;%2$s&rdquo;', '%1$s Responses to &ldquo;%2$s&rdquo;', get_comments_number(), 'cutlass'), number_format_i18n(get_comments_number()), get_the_title()) }}</h3>
 
         <ol class="media-list">
             {{ wp_list_comments(array('walker' => new cutlass_Walker_Comment), $comments) }}

@@ -1,4 +1,4 @@
-<?php global $wp_query; ?>
+@eval(global $wp_query;)
 <div class="box row">
     @if ($wp_query->max_num_pages > 1)
         @if (function_exists('wp_page_numbers'))

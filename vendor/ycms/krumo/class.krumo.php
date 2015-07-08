@@ -455,12 +455,14 @@ class Krumo {
 
             $str = ob_get_clean();
 
-            return $str;
+            return function_exists('base_path') ? str_replace(dirname(base_path()),'~', $str) : $str ;
         // If we were given expand all, set the global variable
         } elseif ($second === KRUMO_EXPAND_ALL) {
             self::$expand_all = true;
+            ob_start();
             Krumo::dump($data);
-
+            $str = ob_get_clean();
+            echo function_exists('base_path') ? str_replace(dirname(base_path()), '~', $str) : $str;
             return true;
         }
 
@@ -1462,6 +1464,8 @@ class Krumo {
             } else {
                 $data = nl2br($data);
             }
+
+            $data = function_exists('base_path') ? str_replace(dirname(base_path()), '~', $data) : $data;
 
             print "<div class=\"krumo-nest\" $collapse_style>";
             print "<ul class=\"krumo-node\">";

@@ -269,6 +269,10 @@ EOF
             }
         }
 
+        if(function_exists('base_path')){
+            $content = str_replace(dirname(base_path()),'~',$content);
+        }
+
         return <<<EOF
             <div id="sf-resetcontent" class="sf-reset">
                 <h1>$title</h1>

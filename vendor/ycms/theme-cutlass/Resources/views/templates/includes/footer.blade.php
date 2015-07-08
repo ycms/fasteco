@@ -82,9 +82,7 @@
 
         if ( jQuery( '.flexslider' ).length && jQuery() ) {
             jQuery('.flexslider').flexslider({
-                animation:'<?php if(of_get_option('slidereffect')==''): echo 'slide';
-				  else: echo of_get_option('slidereffect');
-				  endif;?>',
+                animation:'{{ of_get_option('slidereffect')=='' ? 'slide' : of_get_option('slidereffect') }}',
                 direction: getSliderDirection(),
                 controlNav:true,
                 directionNav:false,
@@ -94,12 +92,8 @@
                 nextText:"&rsaquo;",
                 prevText:"&lsaquo;",
                 keyboardNav: true,
-                slideshowSpeed: <?php if(of_get_option('sliderpausetime')==''): echo '3000';
-				  else: echo of_get_option('sliderpausetime');
-				  endif;?>,
-                animationSpeed: <?php if(of_get_option('slideranimationspeed')==''): echo '500';
-				  else: echo of_get_option('slideranimationspeed');
-				  endif;?>,
+                slideshowSpeed: '{{ of_get_option('sliderpausetime')=='' ?  3000: of_get_option('sliderpausetime') }}',
+                animationSpeed: '{{ of_get_option('slideranimationspeed')=='' ? 500 : of_get_option('slideranimationspeed') }}',
                 start: function(slider) {
                     slider.removeClass('loading');
                 }

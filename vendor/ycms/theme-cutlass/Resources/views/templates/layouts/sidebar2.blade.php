@@ -7,7 +7,7 @@
         </main>
         <!-- /.main -->
         <aside class="sidebar" role="complementary">
-            <?php dynamic_sidebar('sidebar-primary'); ?>
+            @eval(dynamic_sidebar('sidebar-primary'))
         </aside>
         <!-- /.sidebar -->
     </div>

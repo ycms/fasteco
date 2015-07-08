@@ -1,1 +1,1 @@
-<?php dynamic_sidebar('sidebar-primary'); ?>
+@eval(dynamic_sidebar('sidebar-primary'))

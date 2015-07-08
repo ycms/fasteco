@@ -1,4 +1,4 @@
-@layout( 'templates.layouts.index' )
+@extends( 'templates.layouts.index' )
 
 @section('page-content')
 

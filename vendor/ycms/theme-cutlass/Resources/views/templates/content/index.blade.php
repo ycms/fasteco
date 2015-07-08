@@ -7,7 +7,7 @@
 </div>
 {{ get_search_form(FALSE) }}
 @wpend
-<?php global $wp_query; ?>
+@eval(global $wp_query;)
 
 @if ($wp_query->max_num_pages > 1)
     @if (function_exists('wp_page_numbers'))

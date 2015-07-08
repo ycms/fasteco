@@ -819,7 +819,8 @@ final class WP_Theme implements ArrayAccess {
 	 * @return string URL to the stylesheet directory.
 	 */
 	public function get_stylesheet_directory_uri() {
-        kd(Module::get($this->stylesheet));
+        //kd($this->get_theme_root_uri() . '/' . str_replace('%2F', '/', rawurlencode($this->stylesheet)));
+        //kd(Module::get($this->stylesheet));
 		return $this->get_theme_root_uri() . '/' . str_replace( '%2F', '/', rawurlencode( $this->stylesheet ) );
 	}
 

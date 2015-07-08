@@ -9,11 +9,11 @@
         </header>
     </div>
     <div class="entry-content">
-        <?php if ( has_post_thumbnail() && !post_password_required() && !is_attachment() ) : ?>
+        @if( has_post_thumbnail() && !post_password_required() && !is_attachment() )
         <div class="entry-thumbnail">
-            <?php the_post_thumbnail(); ?>
+            {{ the_post_thumbnail() }}
         </div>
-        <?php endif; ?>
+        @endif
         {{ the_content() }}
     </div>
     <footer>

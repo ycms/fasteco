@@ -499,20 +499,26 @@ function locate_template($template_names, $load = false, $require_once = true)
         if (!preg_match("/\.blade\.php$/", $template_name)) {
             $name = preg_replace("/^(.+)\.php$/", "\\1.blade.php", $template_name);
 
-            if (file_exists(STYLESHEETPATH . '/' . $name)) {
+            if (file_exists($path = STYLESHEETPATH . '/Resources/views/' . $name) || (TEMPLATEPATH != STYLESHEETPATH && file_exists($path = TEMPLATEPATH . '/Resources/views/' . $name))) {
+                $located = $path;
+                break;
+            } elseif (file_exists(STYLESHEETPATH . '/' . $name)) {
                 $located = STYLESHEETPATH . '/' . $name;
                 break;
-            } elseif (file_exists(TEMPLATEPATH . '/' . $name)) {
+            } elseif (TEMPLATEPATH != STYLESHEETPATH && file_exists(TEMPLATEPATH . '/' . $name)) {
                 $located = TEMPLATEPATH . '/' . $name;
                 break;
             }
         }
 
 
-        if (file_exists(STYLESHEETPATH . '/' . $template_name)) {
+        if (file_exists($path = STYLESHEETPATH. '/Resources/views/' . $template_name) || (STYLESHEETPATH != TEMPLATEPATH && file_exists($path = TEMPLATEPATH. '/Resources/views/' . $template_name))) {
+            $located = $path;
+            break;
+        } elseif (file_exists(STYLESHEETPATH . '/' . $template_name)) {
             $located = STYLESHEETPATH . '/' . $template_name;
             break;
-        } elseif (file_exists(TEMPLATEPATH . '/' . $template_name)) {
+        } elseif (TEMPLATEPATH != STYLESHEETPATH && file_exists(TEMPLATEPATH . '/' . $template_name)) {
             $located = TEMPLATEPATH . '/' . $template_name;
             break;
         }
@@ -551,13 +557,19 @@ function load_template($_template_file, $require_once = true)
 
     extract(View::getShared());
 
-    if (preg_match("/\.blade\.php$/", $_template_file)) {
-        Blade::compile($path = View::file($_template_file)->getPath());
-        $_template_file = Blade::getCompiledPath($path);
+
+
+    if ($isBlade = preg_match("/\.blade\.php$/", $_template_file)) {
+        $cachefile = Blade::getCompiledPath($_template_file);
+        if(!file_exists($cachefile) || filemtime($cachefile) < $cachefile){
+            Blade::compile($_template_file);
+        }
+        $_template_file = $cachefile;
     }
 
+
     if ($require_once === null) {
-        return $_template_file;
+        return  $_template_file;
     }
 
     if ($require_once) {

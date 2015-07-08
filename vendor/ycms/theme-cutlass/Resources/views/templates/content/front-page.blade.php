@@ -8,7 +8,7 @@
                 <div class="row" style="overflow: hidden;margin-bottom: 30px;position: relative;margin-top:-30px;">
                     <div class="col-md-3 sidebar">
                         <div class="widget" style="margin-bottom: -1000em;padding-bottom: 1000em;">
-                            {{ '';dynamic_sidebar('index') }}
+                            @eval(dynamic_sidebar('index'))
                         </div>
 
                     </div>
@@ -46,13 +46,13 @@
 
                         <!-- 法律专题 start -->
                         <div class="row box">
-                            @yield('专题')
+                            {{-- yield('专题') --}}
                         </div>
                         <!-- 法律专题 end -->
 
                         <!-- 身边法律 start -->
                         <div class="row box">
-                            @yield('身边法律')
+                            {{-- yield('身边法律') --}}
                         </div>
                         <!-- 身边法律 end -->
 
@@ -72,9 +72,8 @@
                                             <div class="row">
                                                 <ul class="owl-carousel" id="news-slider" data-columns="2" data-autoplay="" data-pagination="yes" data-arrows="yes" data-single-item="no" data-items-desktop="2" data-items-desktop-small="1"
                                                     data-items-tablet="2" data-items-mobile="1">
-                                                    <?php for($query = query_category(ot_get_option('info_category', ['news']),
-                                                            3,
-                                                            ['meta_key' => '_thumbnail_id']),$i = 0;$query->have_posts();$i += 1):$query->the_post(); ?>
+                                                    @for($query = query_category(ot_get_option('info_category', ['news']), 3,  ['meta_key' => '_thumbnail_id']),$i = 0;$query->have_posts();$i += 1)
+                                                        @eval($query->the_post())
                                                     <li class="item">
                                                         <div class="post-block format-standard">
                                                             <a href="{{the_permalink()}}" class="media-box post-image">{{get_thumb('337x225')}}</a>
@@ -98,7 +97,7 @@
                                                             </div>
                                                         </div>
                                                     </li>
-                                                    <?php endfor; ?>
+                                                    @endfor
 
                                                     <!--{demo}-->
                                                     <li class="item">
@@ -239,7 +238,7 @@
                                                 <div class="row">
                                                     <ul class="owl-carousel carousel-fw" id="testimonials-slider" data-columns="2" data-autoplay="5000" data-pagination="no" data-arrows="no" data-single-item="no" data-items-desktop="2"
                                                         data-items-desktop-small="1" data-items-tablet="1" data-items-mobile="1">
-                                                        @for ($query = query_meta(['lawyer_recommend'=>'1'],3,['post_type'=>'lawyer']),$i=0; $query->have_posts();$i+=1)
+                                                        @for($query = query_meta(['lawyer_recommend'=>'1'],3,['post_type'=>'lawyer']),$i=0; $query->have_posts();$i+=1)
                                                             {{ $query->the_post() }}
                                                             <li class="item">
                                                                 <div class="testimonial-block">
