@@ -31,7 +31,8 @@
     "guzzlehttp/guzzle": "^6.0",
     "ycms/theme-base": "*@dev",
     "ycms/theme-cutlass": "*@dev",
-    "ycms/theme-evo": "*@dev"
+    "ycms/theme-evo": "*@dev",
+    "ycms/theme2015": "*@dev"
   },
   "require-dev": {
     "fzaninotto/faker": "~1.4",
