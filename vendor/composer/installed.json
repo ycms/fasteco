@@ -5126,5 +5126,36 @@
                 "email": "ycms.net@gmail.com"
             }
         ]
+    },
+    {
+        "name": "ycms/theme2015",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ycms/theme2015.git",
+            "reference": "65bf04ce918590cb5fa91477ba284b3d2733d36a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ycms/theme2015/zipball/65bf04ce918590cb5fa91477ba284b3d2733d36a",
+            "reference": "65bf04ce918590cb5fa91477ba284b3d2733d36a",
+            "shasum": ""
+        },
+        "time": "2015-07-09 01:47:26",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "YC\\Theme2015\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "authors": [
+            {
+                "name": "YCMS Labs",
+                "email": "ycms.net@gmail.com"
+            }
+        ]
     }
 ]

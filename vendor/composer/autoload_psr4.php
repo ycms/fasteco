@@ -9,6 +9,7 @@ return array(
     'Zizaco\\Entrust\\' => array($vendorDir . '/zizaco/entrust/src/Entrust'),
     'Zhuzhichao\\IpLocationZh\\' => array($vendorDir . '/zhuzhichao/ip-location-zh/src'),
     'YC\\Tpl\\' => array($vendorDir . '/ycms/tpl'),
+    'YC\\Theme2015\\' => array($vendorDir . '/ycms/theme2015'),
     'YC\\Main\\' => array($vendorDir . '/ycms/module-main'),
     'YC\\Evo\\' => array($vendorDir . '/ycms/theme-evo'),
     'YC\\Cutlass\\' => array($vendorDir . '/ycms/theme-cutlass'),
