@@ -5673,9 +5673,9 @@ h1.page-title {
     top: -3px;
     left: -3px;
     box-shadow: 0 0 0 2px #252525;
-    -webkit-transition: 0 .3s, opacity .3s;
-    -webkit-transform: scale(.8);
-    -moz-transition: 0 .3s, opacity .3s;
+    /*-webkit-transition: 0 .3s, opacity .3s;*/
+    /*-webkit-transform: scale(.8);*/
+    /*-moz-transition: 0 .3s, opacity .3s;*/
     -moz-transform: scale(.8);
     -ms-transform: scale(.8);
     transition: transform .3s, opacity .3s;
@@ -6559,7 +6559,6 @@ h1.page-title {
 
     .floated .search-form-inner {
         padding: 20px;
-        padding-bottom: 20px;
     }
 
     .floated .search-advanced-trigger {
@@ -7177,8 +7176,6 @@ form.wpcf7-form input[type="text"], form.wpcf7-form input[type="email"], form.wp
 }
 
 .sidebar .widget {
-    background: #E96C4C;
-    background: #74A1D6;
     background: #045CA9;
     color: #fff;
     box-shadow: 1px 3px 5px #233775 inset;
@@ -7200,8 +7197,7 @@ form.wpcf7-form input[type="text"], form.wpcf7-form input[type="email"], form.wp
 
     .seek {
         height: 40px;
-        margin-left:;
-    : 30 px;
+        margin-left:30px;
         margin-top: 10px;
         display: block;
     }
