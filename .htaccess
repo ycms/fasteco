@@ -9,6 +9,8 @@
 
     #RewriteRule ^.*/*\. - [F,L]
 
+
+
     RewriteRule ^/*(source|artisan|vendor|composer.*)/* - [F,L]
 
     # Redirect Trailing Slashes...
@@ -19,7 +21,9 @@
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !^/*static/
-    RewriteRule  ^(.+\.(ico|gif|png|jpe?g|txt|js|css|woff2|woff|xml|html|htm))$ /static/$1
+    RewriteRule  ^(.+\.(ico|gif|png|jpe?g|txt|js|css|woff2|woff|xml))$ /static/$1
+
+
 
     RewriteRule ^index\.php$ - [L]
 
@@ -30,6 +34,9 @@
     RewriteCond %{REQUEST_FILENAME} -d [OR]
     RewriteCond  %{REQUEST_FILENAME} ^/*static/
     RewriteRule ^ - [L]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule  ^(.+\.(ico|gif|png|jpe?g|txt|js|css|woff2|woff|xml))$ - [L]
 
     RewriteRule ^([_0-9a-zA-Z-]+/)?(wp-(content|admin|includes).*) /app/article/$2 [L]
     RewriteRule ^([_0-9a-zA-Z-]+/)?(.*\.php)$ /app/article/$2 [L]

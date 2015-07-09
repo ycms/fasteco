@@ -205,6 +205,9 @@ function get_stylesheet_directory() {
 function get_stylesheet_directory_uri() {
 	$stylesheet = str_replace( '%2F', '/', rawurlencode( get_stylesheet() ) );
 	$theme_root_uri = get_theme_root_uri( $stylesheet );
+	if ($module = Module::get($stylesheet)) {
+		$stylesheet = $module->getName();
+	}
 	$stylesheet_dir_uri = "$theme_root_uri/$stylesheet";
 
 	/**

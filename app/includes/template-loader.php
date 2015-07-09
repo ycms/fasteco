@@ -68,8 +68,7 @@ if ( defined('WP_USE_THEMES') && WP_USE_THEMES ) :
 	endif;
 
 
-
-    /**
+	/**
 	 * Filter the path of the current template before including it.
 	 *
 	 * @since 3.0.0
@@ -77,7 +76,7 @@ if ( defined('WP_USE_THEMES') && WP_USE_THEMES ) :
 	 * @param string $template The path of the template to include.
 	 */
 	if ( $template = apply_filters( 'template_include', $template ) ){
-        load_template($template, false);
+		load_template($template, false);
     }
 
 	return;

@@ -555,14 +555,18 @@ function load_template($_template_file, $require_once = true)
         extract($wp_query->query_vars, EXTR_SKIP);
     }
 
-    extract(View::getShared());
+
 
     if ($require_once === null) {
         return $_template_file;
     }
 
+    extract(View::getShared(), EXTR_REFS);
+
     if ($isBlade = preg_match("/\.blade\.php$/", $_template_file)) {
-        echo View::file($_template_file)->with(get_defined_vars());
+        $tplfile = str_replace(['Resources/views/','.blade.php'],'',substr($_template_file,strlen(get_template_directory())+1));
+        //echo View::make($tplfile)->with(array_except(get_defined_vars(), array('__data', '__path')));
+        echo View::file($_template_file)->with(array_except(get_defined_vars(), array('__data', '__path')) );
         return '';
     }
 

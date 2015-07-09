@@ -156,12 +156,14 @@ class BladeExtend
         // If the Blade template is not using "layouts", we'll just return it
         // unchanged since there is nothing to do with layouts and we will
         // just let the other Blade compilers handle the rest.
+
+        //Strip end of file
+        $value = trim($value);
+
         if (!starts_with($value, '@layout')) {
             return $value;
         }
 
-        //Strip end of file
-        $value = trim($value);
 
         // First we'll split out the lines of the template so we can get the
         // layout from the top of the template. By convention it must be
@@ -189,7 +191,7 @@ class BladeExtend
     public static function do_static($file)
     {
         $ext = pathinfo($file, PATHINFO_EXTENSION);
-        $url = get_stylesheet_directory_uri() . '/static';
+        $url = get_stylesheet_directory_uri();
         $file = trim($file, '/');
         $ver = wp_get_theme()->get('Version');
 
