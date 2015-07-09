@@ -1,15 +1,14 @@
 <?php
 
-if(!defined('WP_ONLY')){
+if (!defined('WP_ONLY')) {
     require_once dirname(__DIR__) . '/index.php';
 }
 
 
-
 define('WP_ALLOW_MULTISITE', true);
 
-define('WP_RELOCATE',true);
-define('RELOCATE',true);
+define('WP_RELOCATE', true);
+define('RELOCATE', true);
 
 
 define('MULTISITE', true);
@@ -20,17 +19,16 @@ define('SITE_ID_CURRENT_SITE', 1);
 define('BLOG_ID_CURRENT_SITE', 1);
 
 
-define('WP_SITEURL','http://'.$_SERVER['HTTP_HOST'].'/app/article');
-define('WP_HOME','http://'.$_SERVER['HTTP_HOST']);
+define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST'] . '/app/article');
+define('WP_HOME', 'http://' . $_SERVER['HTTP_HOST']);
 
-define('WP_CONTENT_DIR',__DIR__);
+define('WP_CONTENT_DIR', __DIR__);
 define('WP_CONTENT_URL', '/app');
 
-define('WP_PLUGIN_DIR', WP_CONTENT_DIR.'/vendor/ycms');
-define('WP_PLUGIN_URL', '/static');
+define('WP_PLUGIN_DIR', WP_CONTENT_DIR . '/vendor/ycms');
+define('WP_PLUGIN_URL', '/app/vendor/ycms');
 
-define('COOKIEPATH',  '/');
-
+define('COOKIEPATH', '/');
 
 /**
  * WordPress基础配置文件。
@@ -48,16 +46,16 @@ define('COOKIEPATH',  '/');
 
 // ** MySQL 设置 - 具体信息来自您正在使用的主机 ** //
 /** WordPress数据库的名称 */
-define('DB_NAME', env('DB_DATABASE','ycms'));
+define('DB_NAME', env('DB_DATABASE', 'ycms'));
 
 /** MySQL数据库用户名 */
-define('DB_USER', env('DB_USERNAME','root'));
+define('DB_USER', env('DB_USERNAME', 'root'));
 
 /** MySQL数据库密码 */
-define('DB_PASSWORD', env('DB_PASSWORD',''));
+define('DB_PASSWORD', env('DB_PASSWORD', ''));
 
 /** MySQL主机 */
-define('DB_HOST', env('DB_HOST','localhost'));
+define('DB_HOST', env('DB_HOST', 'localhost'));
 
 /** 创建数据表时默认的文字编码 */
 define('DB_CHARSET', 'utf8');
@@ -76,14 +74,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         '3K2Zj*A~o3 8?-x;gCp-J}LC+;mB/ngl:@~?R=RgIEuNH07K;}8-5=`|VqKjYh.!');
-define('SECURE_AUTH_KEY',  '0M,-1]ef(kB4wf$@BF`pirc;FP&AMRg{6SC4Ghl::a%kRH:Y-ecrQ&eiVMgM|pdU');
-define('LOGGED_IN_KEY',    'kYcLB+4tj>hbCwN!K%?i`-0P8$e==JPcd:rbLR!P6[ sN-2G7i@O_#M-4dgR~0|{');
-define('NONCE_KEY',        'Ml-u8XyuDs-II Kw0*ZSCAs7$RSJi/CdkZ`8.- UA3#})M+`7CE-7Tq>ZJGB;3PO');
-define('AUTH_SALT',        'i@rveK0mA>2bQ&HS:+O{pT1;LvvoNrJpwg0]Su5^nAeKG&Rv-0[%k|gpe|N`I+j|');
+define('AUTH_KEY', '3K2Zj*A~o3 8?-x;gCp-J}LC+;mB/ngl:@~?R=RgIEuNH07K;}8-5=`|VqKjYh.!');
+define('SECURE_AUTH_KEY', '0M,-1]ef(kB4wf$@BF`pirc;FP&AMRg{6SC4Ghl::a%kRH:Y-ecrQ&eiVMgM|pdU');
+define('LOGGED_IN_KEY', 'kYcLB+4tj>hbCwN!K%?i`-0P8$e==JPcd:rbLR!P6[ sN-2G7i@O_#M-4dgR~0|{');
+define('NONCE_KEY', 'Ml-u8XyuDs-II Kw0*ZSCAs7$RSJi/CdkZ`8.- UA3#})M+`7CE-7Tq>ZJGB;3PO');
+define('AUTH_SALT', 'i@rveK0mA>2bQ&HS:+O{pT1;LvvoNrJpwg0]Su5^nAeKG&Rv-0[%k|gpe|N`I+j|');
 define('SECURE_AUTH_SALT', 'f{nAKRDG>1L{WP.IClu9ZVo_kN?RJS2Os!d|o9 O)y&7-y~h+$/5=!YQf@Kdjr?Z');
-define('LOGGED_IN_SALT',   ')Om9A[LFMQt#!|)<=]SX]=*.GI/bZ.{IQdtG1aK|2)Pu4?zXKy=|OGf)d+D&u_6Z');
-define('NONCE_SALT',       'cARrdYhaB]u?gOFXpSa9yr0vdzZu|qm+0fN-%.y&oBWd^awCiR2! M[Rk6?KK=ef');
+define('LOGGED_IN_SALT', ')Om9A[LFMQt#!|)<=]SX]=*.GI/bZ.{IQdtG1aK|2)Pu4?zXKy=|OGf)d+D&u_6Z');
+define('NONCE_SALT', 'cARrdYhaB]u?gOFXpSa9yr0vdzZu|qm+0fN-%.y&oBWd^awCiR2! M[Rk6?KK=ef');
 
 /**#@-*/
 
@@ -93,7 +91,7 @@ define('NONCE_SALT',       'cARrdYhaB]u?gOFXpSa9yr0vdzZu|qm+0fN-%.y&oBWd^awCiR2!
  * 如果您有在同一数据库内安装多个WordPress的需求，请为每个WordPress设置
  * 不同的数据表前缀。前缀名只能为数字、字母加下划线。
  */
-$table_prefix  = 'wp_';
+$table_prefix = 'wp_';
 
 /**
  * 开发者专用：WordPress调试模式。
@@ -116,8 +114,9 @@ define('WP_ZH_CN_ICP_NUM', true);
 /* 好了！请不要再继续编辑。请保存本文件。使用愉快！ */
 
 /** WordPress目录的绝对路径。 */
-if ( !defined('ABSPATH') )
-	define('ABSPATH', dirname(__FILE__) . '/');
+if (!defined('ABSPATH')) {
+    define('ABSPATH', dirname(__FILE__) . '/');
+}
 
 /** 设置WordPress变量和包含文件。 */
 require_once(__DIR__ . '/includes/wp.php');

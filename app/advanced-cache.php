@@ -107,7 +107,7 @@ class batcache {
 		// Do not batcache blank pages unless they are HTTP redirects
 		$output = trim($output);
 		if ( $output === '' && (!$this->redirect_status || !$this->redirect_location) )
-			return;
+			return false;
 
 		// Construct and save the batcache
 		$cache = array(

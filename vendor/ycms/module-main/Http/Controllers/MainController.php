@@ -25,7 +25,7 @@ class MainController extends Controller {
 
                 wp();
 
-                require_once(dirname(base_path()) . '/app/template-loader.php');
+                require_once(dirname(base_path()) . '/app/includes/template-loader.php');
 
             }
             //require_once dirname(base_path()) . '/app/article/index.php';
