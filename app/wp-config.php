@@ -26,7 +26,7 @@ define('WP_HOME','http://'.$_SERVER['HTTP_HOST']);
 define('WP_CONTENT_DIR',__DIR__);
 define('WP_CONTENT_URL', '/app');
 
-define('WP_PLUGIN_DIR', WP_CONTENT_DIR.'/vendor');
+define('WP_PLUGIN_DIR', WP_CONTENT_DIR.'/vendor/ycms');
 define('WP_PLUGIN_URL', '/static');
 
 define('COOKIEPATH',  '/');
@@ -120,4 +120,4 @@ if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');
 
 /** 设置WordPress变量和包含文件。 */
-require_once(__DIR__ . '/wp.php');
+require_once(__DIR__ . '/includes/wp.php');

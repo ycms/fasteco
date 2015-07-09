@@ -6,4 +6,4 @@
  * Time: 下午12:14
  */
 
-require_once dirname(ABSPATH).'/plugin.php';
+require_once dirname(ABSPATH).'/includes/plugin.php';
