@@ -9,6 +9,7 @@
 
 define('ROOT_PATH', __DIR__ . DIRECTORY_SEPARATOR);
 
+
 /*
 |--------------------------------------------------------------------------
 | Register The Auto Loader

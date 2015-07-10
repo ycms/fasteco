@@ -41,6 +41,7 @@ define('COOKIEPATH', '/');
  * 这个文件被安装程序用于自动生成wp-config.php配置文件，
  * 您可以手动复制这个文件，并重命名为“wp-config.php”，然后填入相关信息。
  *
+ *
  * @package WordPress
  */
 
@@ -74,14 +75,18 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY', '3K2Zj*A~o3 8?-x;gCp-J}LC+;mB/ngl:@~?R=RgIEuNH07K;}8-5=`|VqKjYh.!');
-define('SECURE_AUTH_KEY', '0M,-1]ef(kB4wf$@BF`pirc;FP&AMRg{6SC4Ghl::a%kRH:Y-ecrQ&eiVMgM|pdU');
-define('LOGGED_IN_KEY', 'kYcLB+4tj>hbCwN!K%?i`-0P8$e==JPcd:rbLR!P6[ sN-2G7i@O_#M-4dgR~0|{');
-define('NONCE_KEY', 'Ml-u8XyuDs-II Kw0*ZSCAs7$RSJi/CdkZ`8.- UA3#})M+`7CE-7Tq>ZJGB;3PO');
-define('AUTH_SALT', 'i@rveK0mA>2bQ&HS:+O{pT1;LvvoNrJpwg0]Su5^nAeKG&Rv-0[%k|gpe|N`I+j|');
-define('SECURE_AUTH_SALT', 'f{nAKRDG>1L{WP.IClu9ZVo_kN?RJS2Os!d|o9 O)y&7-y~h+$/5=!YQf@Kdjr?Z');
-define('LOGGED_IN_SALT', ')Om9A[LFMQt#!|)<=]SX]=*.GI/bZ.{IQdtG1aK|2)Pu4?zXKy=|OGf)d+D&u_6Z');
-define('NONCE_SALT', 'cARrdYhaB]u?gOFXpSa9yr0vdzZu|qm+0fN-%.y&oBWd^awCiR2! M[Rk6?KK=ef');
+if(is_file(__DIR__.'/authkey.php')){
+    require __DIR__.'/authkey.php';
+} else {
+    define('AUTH_KEY', '3K2Zj*A~o3 8?-x;gCp-J}LC+;mB/ngl:@~?R=RgIEuNH07K;}8-5=`|VqKjYh.!');
+    define('SECURE_AUTH_KEY', '0M,-1]ef(kB4wf$@BF`pirc;FP&AMRg{6SC4Ghl::a%kRH:Y-ecrQ&eiVMgM|pdU');
+    define('LOGGED_IN_KEY', 'kYcLB+4tj>hbCwN!K%?i`-0P8$e==JPcd:rbLR!P6[ sN-2G7i@O_#M-4dgR~0|{');
+    define('NONCE_KEY', 'Ml-u8XyuDs-II Kw0*ZSCAs7$RSJi/CdkZ`8.- UA3#})M+`7CE-7Tq>ZJGB;3PO');
+    define('AUTH_SALT', 'i@rveK0mA>2bQ&HS:+O{pT1;LvvoNrJpwg0]Su5^nAeKG&Rv-0[%k|gpe|N`I+j|');
+    define('SECURE_AUTH_SALT', 'f{nAKRDG>1L{WP.IClu9ZVo_kN?RJS2Os!d|o9 O)y&7-y~h+$/5=!YQf@Kdjr?Z');
+    define('LOGGED_IN_SALT', ')Om9A[LFMQt#!|)<=]SX]=*.GI/bZ.{IQdtG1aK|2)Pu4?zXKy=|OGf)d+D&u_6Z');
+    define('NONCE_SALT', 'cARrdYhaB]u?gOFXpSa9yr0vdzZu|qm+0fN-%.y&oBWd^awCiR2! M[Rk6?KK=ef');
+}
 
 /**#@-*/
 
