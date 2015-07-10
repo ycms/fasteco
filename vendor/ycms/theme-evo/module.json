@@ -4,6 +4,7 @@
     "description": "",
     "keywords": [],
     "active": 1,
+    "type":"theme",
     "order": 0,
     "providers": [
         "YC\\Evo\\Providers\\EvoServiceProvider"
